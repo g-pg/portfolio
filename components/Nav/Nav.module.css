@@ -1,0 +1,86 @@
+.mainNav {
+    height: var(--nav-height-desktop);
+}
+
+.navWrapper {
+    padding: 1.5rem 1rem;
+    --align-gap: 3rem;
+
+}
+
+
+.mainNav ul::before {
+    font-family: var(--roboto);
+    content: "{";
+    color: var(--yellow);
+    font-weight: 800;
+    margin-right: -10px;
+    margin-top: -2px;
+}
+
+.mainNav ul::after {
+    font-family: var(--roboto);
+    content: "}";
+    color: var(--yellow);
+    font-weight: 800;
+    margin-left: -10px;
+    margin-top: -2px;
+}
+
+.mainNav ul {
+    list-style: none;
+    font-size: 1.2rem;
+    display: flex;
+    gap: 2rem;
+    margin-left: auto;
+}
+
+.mainNav li>a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.mainNav li:hover {
+    /* transform: scale(1.05);
+    transition: 0.1s ease; */
+
+}
+
+.mainNav li .projetos:hover {
+    color: var(--yellow);
+    /* color: red; */
+}
+
+.mainNav li .sobre:hover {
+    color: var(--yellow);
+}
+
+.mainNav li .contato:hover {
+    color: var(--yellow);
+}
+
+
+
+
+/* Social wrapper */
+.socialWrapper {
+    --align-gap: 1rem;
+}
+
+.socialIcon {
+    width: 35px;
+    color: var(--white);
+}
+
+.socialIcon:hover {
+    transform: scale(1.15);
+    transition: 0.15s ease;
+}
+
+.socialIcon.ln:hover {
+    color: var(--ln-blue)
+}
+
+.socialIcon.gh:hover {
+    color: var(--gh-purple)
+}
