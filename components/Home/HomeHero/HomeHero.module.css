@@ -192,3 +192,15 @@
     }
 
 }
+
+@media (max-width: 768px) {
+    .sectionWrapper {
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .sectionWrapper>* {
+        width: 100%;
+    }
+}

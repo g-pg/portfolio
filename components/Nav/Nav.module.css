@@ -95,3 +95,10 @@
 .socialIcon.gh:hover {
     color: var(--gh-purple)
 }
+
+@media (max-width: 768px) {
+    .mainNav ul {
+        display: none;
+    }
+
+}
