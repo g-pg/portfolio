@@ -112,7 +112,7 @@ select {
   --white: rgb(238, 238, 238);
   /* --green: rgb(116, 255, 31); */
 
-  --gh-purple: rgb(155, 90, 245);
+  --gh-purple: rgb(180, 50, 255);
   --ln-blue: rgb(0, 153, 238);
 
 
@@ -123,6 +123,10 @@ select {
   /* Layout fixed */
   --nav-height-desktop: 80px;
   --nav-height-mobile: 50px;
+
+
+
+
 }
 
 body {

@@ -1,5 +1,7 @@
-import HomeHero from "@components/components/HomeHero/HomeHero";
-import Nav from "@components/components/Nav/Nav";
+import Footer from "@components/Footer/Footer";
+import HomeHero from "@components/Home/HomeHero/HomeHero";
+import SkillsSection from "@components/Home/SkillsSection/SkillsSection";
+import Nav from "@components/Nav/Nav";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -14,6 +16,9 @@ export default function Home() {
 			</Head>
 			<Nav />
 			<HomeHero />
+			<SkillsSection />
+
+			<Footer />
 		</>
 	);
 }

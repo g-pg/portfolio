@@ -1,5 +1,6 @@
 .mainNav {
     height: var(--nav-height-desktop);
+
 }
 
 .navWrapper {
@@ -9,7 +10,7 @@
 }
 
 
-.mainNav ul::before {
+/* .mainNav ul::before {
     font-family: var(--roboto);
     content: "{";
     color: var(--yellow);
@@ -25,11 +26,11 @@
     font-weight: 800;
     margin-left: -10px;
     margin-top: -2px;
-}
+} */
 
 .mainNav ul {
     list-style: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     display: flex;
     gap: 2rem;
     margin-left: auto;
@@ -40,15 +41,25 @@
     text-decoration: none;
 }
 
+/* .mainNav li>a::before {
+    content: "#";
+    margin-right: 3px;
+} */
+
+.mainNav li {
+    border-bottom: 1px solid transparent;
+    padding-bottom: 5px;
+    transition: 0.2s ease-in-out;
+}
+
 .mainNav li:hover {
-    /* transform: scale(1.05);
-    transition: 0.1s ease; */
+    border-bottom: 1px solid var(--white);
+
 
 }
 
-.mainNav li .projetos:hover {
+/* .mainNav li .projetos:hover {
     color: var(--yellow);
-    /* color: red; */
 }
 
 .mainNav li .sobre:hover {
@@ -57,7 +68,7 @@
 
 .mainNav li .contato:hover {
     color: var(--yellow);
-}
+} */
 
 
 

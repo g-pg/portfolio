@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Nav.module.css";
-import LnIcon from "../../public/svg/icons/linkedin-icon.svg";
-import GhIcon from "../../public/svg/icons/github-icon.svg";
+import LnIcon from "@svg/icons/linkedin-icon.svg";
+import GhIcon from "@svg/icons/github-icon.svg";
 import classNames from "classnames";
 
 export default function Nav() {

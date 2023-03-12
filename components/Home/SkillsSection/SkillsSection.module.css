@@ -1,0 +1,6 @@
+.sectionWrapper {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    width: 80%;
+}

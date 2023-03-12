@@ -2,16 +2,15 @@ import React, { useState } from "react";
 import classNames from "classnames";
 import styles from "./HomeHero.module.css";
 
-import MinimizeIcon from "../../public/svg/minimize.svg";
-import MaximizeIcon from "../../public/svg/maximize.svg";
-import CloseIcon from "../../public/svg/close.svg";
+import MinimizeIcon from "@svg/minimize.svg";
+import MaximizeIcon from "@svg/maximize.svg";
+import CloseIcon from "@svg/close.svg";
 import Typewriter from "typewriter-effect";
 
 export default function HomeHero() {
 	const [isTyping, setIsTyping] = useState(true);
 	const [minimized, setMinimized] = useState(false);
 	const [maximized, setMaximized] = useState(false);
-	console.log(isTyping);
 	return (
 		<section className={styles.section}>
 			<div className={classNames(styles.sectionWrapper, "container")}>
@@ -26,7 +25,13 @@ export default function HomeHero() {
 
 						<h3>
 							&gt; meu linkedin é{" "}
-							<span style={{ color: "var(--ln-blue)" }}>/gabrielpgusso</span>
+							<span style={{ color: "var(--ln-blue)" }}>/ggusso</span>
+						</h3>
+						<h3>
+							&gt; meu e-mail é{" "}
+							<span style={{ color: "var(--orange)" }}>
+								gabrielpgusso@gmail.com
+							</span>
 						</h3>
 					</div>
 				</div>
@@ -45,15 +50,15 @@ export default function HomeHero() {
 								<MinimizeIcon
 									className={styles.minimize}
 									onClick={() => {
-										setMinimized(true);
+										setMinimized(!minimized);
 										setMaximized(false);
 									}}
 								/>
 								<MaximizeIcon
 									className={styles.maximize}
 									onClick={() => {
+										setMaximized(minimized ? false : !maximized);
 										setMinimized(false);
-										setMaximized(!maximized);
 									}}
 								/>
 								<CloseIcon
@@ -66,10 +71,12 @@ export default function HomeHero() {
 							<Typewriter
 								onInit={(typewriter) => {
 									typewriter
-										.changeDelay(200)
+										.pauseFor(500)
+										// .changeDelay(200)
+										.changeDelay(30)
 										.typeString("<")
 										.typeString("h2>")
-										.changeDelay(50)
+
 										.typeString(
 											'<h2> Eu gosto de programar e estou buscando experiência profissional em <span class="span-dev">desenvolvimento web</span>.</h2> '
 										)
@@ -88,7 +95,12 @@ export default function HomeHero() {
 							/>
 						</div>
 					</div>
-					<p className={styles.smiley}>{":)"}</p>
+					<p
+						className={styles.smiley}
+						style={{ transform: minimized ? "translate(0, -50%)" : "" }}
+					>
+						{"Ei! Ponha a peça de volta no lugar!"}
+					</p>
 				</div>
 			</div>
 		</section>
