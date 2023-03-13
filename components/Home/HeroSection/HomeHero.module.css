@@ -132,7 +132,7 @@
 .frameWrapper.minimized {
     position: fixed;
     bottom: 0;
-    right: 30px;
+    right: 10px;
     height: 0;
     width: 300px;
     animation: 0.5s ease minimize;
@@ -235,16 +235,25 @@
         text-align: center;
     }
 
+    .smiley {
+        height: 80%;
+    }
+
     .frameWrapper.minimized~.smiley {
         display: none;
     }
 
     .frameWrapper {
         margin-top: auto;
-        width: 60vw;
-        height: 225px;
+        width: 70vw;
+        /* height: 220px; */
         transition: width 0.4s ease-out;
         animation: none;
+    }
+
+    .frameWindow {
+        padding: 1rem;
+        min-height: 196px;
     }
 
     .frameWrapper.minimized {
