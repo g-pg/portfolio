@@ -1,8 +1,27 @@
 .sectionWrapper {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cardsWrapper {
+    /* margin-top: 2rem; */
+    display: flex;
     align-items: stretch;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
     gap: 2rem;
-    width: 80%;
+    /* width: 80%; */
+    margin: 0 auto;
+}
+
+.cardsWrapper>* {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .cardsWrapper {
+        flex-direction: column;
+    }
+
 }

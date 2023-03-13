@@ -1,5 +1,5 @@
 import Footer from "@components/Footer/Footer";
-import HomeHero from "@components/Home/HomeHero/HomeHero";
+import HomeHero from "@components/Home/HeroSection/HomeHero";
 import SkillsSection from "@components/Home/SkillsSection/SkillsSection";
 import Nav from "@components/Nav/Nav";
 import Head from "next/head";
@@ -14,8 +14,14 @@ export default function Home() {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				{/* <link rel="icon" href="/favicon.ico" /> */}
 			</Head>
-			<Nav />
-			<HomeHero />
+			<div
+				style={{
+					height: "100dvh",
+				}}
+			>
+				<Nav />
+				<HomeHero />
+			</div>
 			<SkillsSection />
 
 			<Footer />

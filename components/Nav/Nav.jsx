@@ -8,15 +8,12 @@ export default function Nav() {
 	return (
 		<nav className={styles.mainNav}>
 			<div className={classNames(styles.navWrapper, "container navwrapper flex-align")}>
-				<div className={classNames(styles.socialWrapper, "flex-align")}>
-					<a href="#">
-						<LnIcon className={classNames(styles.socialIcon, styles.ln)} />
-					</a>
-					<a href="#">
-						<GhIcon className={classNames(styles.socialIcon, styles.gh)} />
-					</a>
-				</div>
 				<ul>
+					<li>
+						<a href="#" className={classNames(styles.link, styles.contato)}>
+							Skillset
+						</a>
+					</li>
 					<li>
 						<a href="#" className={classNames(styles.link, styles.projetos)}>
 							Projetos

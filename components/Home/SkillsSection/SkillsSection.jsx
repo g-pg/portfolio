@@ -10,23 +10,26 @@ export default function SkillsSection() {
 	return (
 		<section>
 			<div className={classNames("container", styles.sectionWrapper)}>
-				<MainCard
-					svg={<GhIcon />}
-					title={"Versionamento"}
-					text={"Tenho experiência com controle de versão no GitHub."}
-				/>
-				<MainCard
-					svg={<WebPageIcon />}
-					title={"Linguagens"}
-					text={
-						"Sei criar sites com HTML acessível, CSS responsivo e deixar as coisas dinâmicas com Javascript."
-					}
-				/>
-				<MainCard
-					svg={<ReactIcon />}
-					title={"Frameworks e libs"}
-					text={"Tenho conhecimentos em React.JS e Next.JS."}
-				/>
+				<h3 className="section-title">Skillset</h3>
+				<div className={styles.cardsWrapper}>
+					<MainCard
+						svg={<WebPageIcon />}
+						title={"Linguagens"}
+						text={
+							"Sei criar sites com HTML acessível, CSS responsivo e deixar as coisas dinâmicas com Javascript."
+						}
+					/>
+					<MainCard
+						svg={<GhIcon />}
+						title={"Versionamento"}
+						text={"Tenho experiência com controle de versão no GitHub."}
+					/>
+					<MainCard
+						svg={<ReactIcon />}
+						title={"Frameworks e libs"}
+						text={"Tenho conhecimentos em React.JS e Next.JS."}
+					/>
+				</div>
 			</div>
 		</section>
 	);
