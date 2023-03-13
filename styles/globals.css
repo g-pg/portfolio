@@ -12,9 +12,11 @@
   --bg-gradient: linear-gradient(180deg, var(--lighter-blue) 0%, var(--deep-blue) 20%, var(--dark-blue) 80%);
 
 
-  --deep-blue: #0b1f31;
-  --lighter-blue: #183753;
-  --dark-blue: #0B1926;
+  /* --deep-blue: #0b1f31; */
+  --deep-blue: #0a2038;
+  --lighter-blue: #123b66;
+  /* --dark-blue: #0B1926; */
+  --dark-blue: #09121c;
   --yellow: #e2ab05;
   --dark-yellow: rgb(167, 137, 4);
   --white: #D9D9D9;
