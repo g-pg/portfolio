@@ -9,7 +9,7 @@
 
   /* Dark theme */
   /* --bg-gradient: linear-gradient(180deg, #1F2D3C 0%, #0A1726 48.44%, #173353 99.48%); */
-  --bg-gradient: linear-gradient(180deg, var(--lighter-blue) 0%, var(--deep-blue) 30%, var(--dark-blue) 80%);
+  --bg-gradient: linear-gradient(180deg, var(--lighter-blue) 0%, var(--dark-blue) 25%, var(--dark-blue) 80%);
 
 
   --deep-blue: #0b1f31;
