@@ -52,6 +52,17 @@ body {
   background: var(--bg-gradient);
   font-family: 'Fira Code', monospace;
   color: var(--white);
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.home-section {
+  margin-bottom: 20vh;
+
+  scroll-margin-top: 1rem;
 }
 
 /* Títulos e texto */
