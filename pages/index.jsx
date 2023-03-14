@@ -1,5 +1,6 @@
 import Footer from "@components/Footer/Footer";
 import HomeHero from "@components/Home/HeroSection/HomeHero";
+import ProjectsSection from "@components/Home/ProjectsSection/ProjectsSection";
 import SkillsSection from "@components/Home/SkillsSection/SkillsSection";
 import Nav from "@components/Nav/Nav";
 import Head from "next/head";
@@ -23,7 +24,7 @@ export default function Home() {
 				<HomeHero />
 			</div>
 			<SkillsSection />
-
+			<ProjectsSection />
 			<Footer />
 		</>
 	);
