@@ -1,0 +1,9 @@
+.sectionWrapper {
+    width: 50%;
+}
+
+@media (max-width: 780px) {
+    .sectionWrapper {
+        width: 80%;
+    }
+}
