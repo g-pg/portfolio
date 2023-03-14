@@ -41,6 +41,7 @@
   margin-inline: auto;
 }
 
+
 @media (max-width: 768px) {
   .container {
     width: 100%;
@@ -61,7 +62,6 @@ html {
 
 .home-section {
   margin-bottom: 20vh;
-
   scroll-margin-top: 1rem;
 }
 

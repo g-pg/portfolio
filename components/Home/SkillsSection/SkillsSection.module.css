@@ -10,16 +10,7 @@
 }
 
 .cardsWrapper {
-    /*     
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    width: 80%;
-    margin: 0 auto; */
-
     display: grid;
-    /* grid-auto-flow: column; */
     gap: 1.5rem;
     justify-content: space-between;
     grid-template-columns: 1fr 1fr 1fr;

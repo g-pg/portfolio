@@ -57,9 +57,9 @@ export default function HomeHero() {
 							)}
 						>
 							<div className={classNames(styles.frameBar, "flex-align")}>
-								<Link href="#hero-section" className={styles.fileName}>
+								<a href="#hero-section" className={styles.fileName}>
 									heroSection.jsx
-								</Link>
+								</a>
 								<div className={classNames(styles.controls, "flex-align")}>
 									<MinimizeIcon
 										className={styles.minimize}
