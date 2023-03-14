@@ -239,6 +239,7 @@
 
     .smiley {
         height: 80%;
+        display: none;
     }
 
     .frameWrapper.minimized~.smiley {
