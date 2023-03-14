@@ -1,28 +1,40 @@
+.section {
+    /* height: 100dvh; */
+}
+
 .sectionWrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .cardsWrapper {
-
+    /*     
     display: flex;
-
     justify-content: space-between;
-    /* flex-wrap: wrap; */
+    align-items: center;
     gap: 2rem;
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto; */
+
+    display: grid;
+    /* grid-auto-flow: column; */
+    gap: 1.5rem;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
 }
 
 .cardsWrapper>* {
-    width: 100%;
+    /* width: 100%; */
 }
 
 @media (max-width: 768px) {
     .cardsWrapper {
-        flex-direction: column;
-        width: 100%;
+        grid-template-columns: none;
+        grid-auto-flow: row;
+        justify-content: center;
     }
 
 }

@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
+
+import Link from "next/link";
 import Image from "next/image";
 import classNames from "classnames";
 import styles from "./HomeHero.module.css";
@@ -18,7 +20,7 @@ export default function HomeHero() {
 	const [maximized, setMaximized] = useState(false);
 
 	return (
-		<section className={styles.section}>
+		<section className={styles.section} id="hero-section">
 			<div className="container">
 				<div className={classNames(styles.sectionWrapper)}>
 					<div className={styles.textCol}>
@@ -55,7 +57,9 @@ export default function HomeHero() {
 							)}
 						>
 							<div className={classNames(styles.frameBar, "flex-align")}>
-								<p className={styles.fileName}>heroSection.jsx</p>
+								<Link href="#hero-section" className={styles.fileName}>
+									heroSection.jsx
+								</Link>
 								<div className={classNames(styles.controls, "flex-align")}>
 									<MinimizeIcon
 										className={styles.minimize}

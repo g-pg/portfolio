@@ -8,7 +8,7 @@ import classNames from "classnames";
 
 export default function SkillsSection() {
 	return (
-		<section>
+		<section className="home-section" id="skills">
 			<div className={classNames("container", styles.sectionWrapper)}>
 				<h3 className="section-title">Skillset</h3>
 				<div className={styles.cardsWrapper}>
