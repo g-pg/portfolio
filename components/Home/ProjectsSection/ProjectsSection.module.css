@@ -96,8 +96,6 @@
 .projectContainer:hover .overlay {
     opacity: 70%;
     background: black;
-    /* backdrop-filter: blur(100px); */
-    backdrop-filter: blur(10px);
 }
 
 .projectContainer:hover .projectText {
