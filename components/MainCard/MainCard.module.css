@@ -1,11 +1,9 @@
 .cardWrapper {
-    --accent: var(--dark-yellow);
     display: flex;
     flex-direction: column;
-    /* max-width: 300px; */
-    background: var(--deep-blue);
+    background: var(--cl-main-light);
     padding: 2rem;
-    border: 2px solid var(--accent);
+    border: 2px solid var(--cl-accent);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 15px 25px, rgba(0, 0, 0, 0.22) 0px 10px 12px;
     border-radius: 8px;
     gap: 1rem;
@@ -17,10 +15,8 @@
 .svg>* {
     width: 35px;
     height: 35px;
-    color: var(--accent)
+
 }
-
-
 
 .title {
     /* margin-top: -.5rem; */
@@ -35,9 +31,11 @@
 }
 
 .cardWrapper:hover {
-    --accent: var(--yellow);
     transform: translateY(-10px);
+}
 
+.cardWrapper:hover .svg {
+    color: var(--cl-accent);
 }
 
 @media (max-width: 768px) {

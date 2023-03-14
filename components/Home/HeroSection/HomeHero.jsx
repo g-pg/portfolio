@@ -24,7 +24,7 @@ export default function HomeHero() {
 			<div className="container">
 				<div className={classNames(styles.sectionWrapper)}>
 					<div className={styles.textCol}>
-						<p className={styles.hello}>{`// Olá, meu nome é`}</p>
+						<p className={styles.hello}>{`// olá, meu nome é`}</p>
 						<h1>Gabriel Gusso</h1>
 						<p className={styles.subText}>
 							_desenvolvedor front-end localizado em Curitiba, PR.

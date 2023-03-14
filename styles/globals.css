@@ -7,24 +7,33 @@
 
 :root {
 
-  /* Dark theme */
-  /* --bg-gradient: linear-gradient(180deg, #1F2D3C 0%, #0A1726 48.44%, #173353 99.48%); */
-  /* --bg-gradient: linear-gradient(180deg, var(--lighter-blue) 0%, var(--dark-blue) 25%, var(--dark-blue) 80%); */
-  --bg-gradient: var(--dark-blue);
+  /* Ocean treasure */
+  /* --bg-gradient: linear-gradient(180deg, var(--cl-main-light) 0%, var(--cl-main-dark) 25%, var(--cl-main-dark) 80%); */
+  --bg-gradient: var(--cl-main-dark);
+
+  --cl-main-dark: #0a1e2c;
+  --cl-main-light: #103b57;
+
+  --cl-accent: #cf9c04;
+  --cl-accent-dark: #9c8000;
+
+  --white: #D9D9D9;
 
 
-  --deep-blue: #0b1f31;
-  /* --deep-blue: #0e2136; */
-  --lighter-blue: #12355c;
-  --dark-blue: #0B1926;
-  /* --dark-blue: #09121c; */
-  --yellow: #cf9c04;
-  --dark-yellow: rgb(156, 128, 0);
+  /* Fiery night */
+  --bg-gradient: var(--cl-main-dark);
+
+  --cl-main-dark: #161A1D;
+  --cl-main-light: #1d2225;
+
+  --cl-accent: #F05454;
+  --cl-accent-dark: #aa1a1a;
+
   --white: #D9D9D9;
 
   /* Fonts */
-  --roboto: 'Roboto', serif;
-  --cubano: 'Cubano', sans-serif;
+  --roboto: 'Roboto Slab', serif;
+  --fira: 'Fira', sans-serif;
 
   /* Layout fixed */
   --nav-height-desktop: 80px;
@@ -62,7 +71,7 @@ html {
 }
 
 .home-section {
-  margin-bottom: 20vh;
+  margin-bottom: 25vh;
   scroll-margin-top: 1rem;
 }
 
@@ -70,7 +79,6 @@ html {
 
 .section-title {
   color: lightgray;
-  margin-top: 4rem;
   margin-bottom: 2rem;
   font-size: 2rem;
   text-align: center;

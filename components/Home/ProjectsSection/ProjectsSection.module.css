@@ -90,7 +90,7 @@
 
 .linkIcon:hover {
     transform: scale(1.1);
-    color: var(--yellow);
+    color: var(--cl-accent);
 }
 
 .projectContainer:hover .overlay {
