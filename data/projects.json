@@ -16,7 +16,7 @@
 	{
 		"id": 2,
 		"name": "Estética Malu Soares",
-		"description": "Meu primeiro projeto. Construí um site estático com HTML, CSS e um pouco de Javascript para uma amiga que trabalha no ramo da estética.",
+		"description": "Meu primeiro projeto. Site estático com apenas HTML, CSS e JS.",
 		"ghLink": "https://github.com/g-pg/estetica-malusoares",
 		"liveLink": "https://estetica-malu.netlify.app/index.html",
 		"tools": ["html", "css", "javascript"],
@@ -43,7 +43,7 @@
 	{
 		"id": 4,
 		"name": "Página com menu dropdown",
-		"description": "Challenge do Frontend Mentor para uma landing page com menu dropdown. Feito com apenas Javascript para não deixar o básico enferrujar :)",
+		"description": "Challenge do Frontend Mentor para uma landing page com menu dropdown feita com JS vanilla.",
 		"ghLink": "https://github.com/g-pg/frontendmentor-intro-with-dropdown",
 		"liveLink": "https://g-pg.github.io/frontendmentor-intro-with-dropdown/",
 		"img": {
