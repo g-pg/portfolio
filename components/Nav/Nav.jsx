@@ -3,6 +3,7 @@ import styles from "./Nav.module.css";
 import LnIcon from "@svg/icons/linkedin-icon.svg";
 import GhIcon from "@svg/icons/github-icon.svg";
 import classNames from "classnames";
+import Link from "next/link";
 
 export default function Nav() {
 	return (
@@ -10,22 +11,28 @@ export default function Nav() {
 			<div className={classNames(styles.navWrapper, "container navwrapper flex-align")}>
 				<ul>
 					<li>
-						<a href="#" className={classNames(styles.link, styles.contato)}>
+						<a href="#skills" className={classNames(styles.link, styles.contato)}>
 							Skillset
 						</a>
 					</li>
 					<li>
-						<a href="#" className={classNames(styles.link, styles.projetos)}>
+						<a
+							href="#projects"
+							className={classNames(styles.link, styles.projetos)}
+						>
 							Projetos
 						</a>
 					</li>
 					<li>
-						<a href="#" className={classNames(styles.link, styles.sobre)}>
+						<a href="#about" className={classNames(styles.link, styles.sobre)}>
 							Sobre Mim
 						</a>
 					</li>
 					<li>
-						<a href="#" className={classNames(styles.link, styles.contato)}>
+						<a
+							href="#contact"
+							className={classNames(styles.link, styles.contato)}
+						>
 							Contato
 						</a>
 					</li>
