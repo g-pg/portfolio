@@ -42,12 +42,7 @@
 
 
 @media (max-width: 768px) {
-    .navWrapper {
-        height: var(--nav-height-mobile)
-    }
-
-    .bu .navWrapper ul {
+    .nav {
         display: none;
     }
-
 }
