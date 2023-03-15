@@ -1,15 +1,9 @@
-.mainNav {
-    height: var(--nav-height-desktop);
-    margin-bottom: 1rem;
-}
-
-.navWrapper {
-    padding: 1.5rem 1rem;
-    --align-gap: 3rem;
+.nav {
+    margin-left: auto;
 }
 
 
-.mainNav ul {
+.navWrapper ul {
     list-style: none;
     font-size: 1rem;
     display: flex;
@@ -18,23 +12,23 @@
 }
 
 
-.mainNav li {
+.navWrapper li {
     transition: transform 0.4s ease;
 }
 
-.mainNav li:hover {
+.navWrapper li:hover {
     transform: translateY(2px);
     filter: brightness(5)
 }
 
 
-.mainNav li>a {
+.navWrapper li>a {
     color: inherit;
     text-decoration: none;
     text-transform: lowercase;
 }
 
-.mainNav li>a::before {
+.navWrapper li>a::before {
     content: "_";
 
 }
@@ -62,12 +56,22 @@
     color: var(--gh-purple)
 }
 
+
+.burgerBtn {}
+
+.burgerLine {
+    width: 20px;
+    background: var(--white);
+    height: 10px;
+}
+
+
 @media (max-width: 768px) {
-    .mainNav {
+    .navWrapper {
         height: var(--nav-height-mobile)
     }
 
-    .mainNav ul {
+    .bu .navWrapper ul {
         display: none;
     }
 

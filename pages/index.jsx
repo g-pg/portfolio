@@ -3,10 +3,9 @@ import AboutSection from "@components/Home/AboutSection/AboutSection";
 import HomeHero from "@components/Home/HeroSection/HomeHero";
 import ProjectsSection from "@components/Home/ProjectsSection/ProjectsSection";
 import SkillsSection from "@components/Home/SkillsSection/SkillsSection";
-import Nav from "@components/Nav/Nav";
 import Head from "next/head";
 import Image from "next/image";
-
+import Header from "@components/Header/Header";
 export default function Home() {
 	return (
 		<>
@@ -21,7 +20,7 @@ export default function Home() {
 					height: "100dvh",
 				}}
 			>
-				<Nav />
+				<Header />
 				<HomeHero />
 			</div>
 			<SkillsSection />

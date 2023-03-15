@@ -1,7 +1,7 @@
 .section {
     display: flex;
     align-items: center;
-    height: calc(100dvh - var(--nav-height-desktop));
+    min-height: calc(100dvh - var(--nav-height-desktop));
 }
 
 .sectionWrapper {

@@ -37,7 +37,7 @@
 
   /* Layout fixed */
   --nav-height-desktop: 80px;
-  --nav-height-mobile: 45px;
+  --nav-height-mobile: 60px;
 
 }
 
@@ -55,7 +55,6 @@
 @media (max-width: 768px) {
   .container {
     width: 100%;
-    padding-inline: 1rem;
   }
 }
 
@@ -73,6 +72,7 @@ html {
 .home-section {
   margin-bottom: 25vh;
   scroll-margin-top: 1rem;
+  padding-inline: 1rem;
 }
 
 /* Títulos e texto */
