@@ -1,0 +1,15 @@
+.socialWrapper {
+    --align-gap: 2rem;
+}
+
+.socialIcon {
+    width: 35px;
+    height: auto;
+    color: var(--white);
+}
+
+.socialIcon:hover {
+    transform: scale(1.15);
+    transition: 0.15s ease;
+    color: var(--cl-accent);
+}
