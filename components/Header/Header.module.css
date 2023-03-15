@@ -1,11 +1,10 @@
 .header {
-    /* margin-bottom: 10px solid white; */
+    margin-bottom: 1rem;
 }
 
 .headerWrapper {
     height: var(--nav-height-desktop);
     padding: 1rem 1.5rem;
-    border-bottom: 1px solid var(--cl-main-light);
 }
 
 @media (max-width: 768px) {
