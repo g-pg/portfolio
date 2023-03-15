@@ -44,7 +44,7 @@ function BurgerNav() {
 		const aside = asideRef.current;
 		function closeBurger(e) {
 			e.stopPropagation();
-			if (asideRef.current.contains(e.target)) {
+			if (e.target != aside) {
 				setShowBurger(false);
 			}
 		}
