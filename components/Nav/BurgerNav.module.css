@@ -1,53 +1,61 @@
 /* Button container */
+
+
 .burgerContainer {
-    margin-left: auto;
     width: 30px;
     height: 30px;
     display: flex;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
-    position: relative;
-    transition: all 0.3s ease;
+    z-index: 1000;
+    position: fixed;
+    padding: 1rem;
+    border-radius: 50%;
+    top: 1rem;
+    right: 0.6rem;
+    /* background: var(--white); */
+    backdrop-filter: blur(5px);
+
 }
 
-.burgerBtn {
-    /* position: relative; */
-}
 
 .burgerBtn,
 .burgerBtn::before,
 .burgerBtn::after {
     content: "";
-    background: var(--white);
-    width: 100%;
-    height: 3px;
+    background: var(--cl-accent);
+    width: 20px;
+    height: 2px;
     border-radius: 6px;
     position: absolute;
-    transition: all 0.3s ease;
+    z-index: 1000;
+    transition: 0.5s ease;
 }
 
-.burgerBtn::before {
 
-    transform: translateY(-8px);
+.burgerBtn::before {
+    transform: translateY(-6px);
 }
 
 .burgerBtn::after {
-    transform: translateY(8px);
+    transform: translateY(6px);
 }
 
 
-.asideWrapper.active .burgerBtn {
-    transform: translate(50px);
+.burgerActive .burgerBtn {
+    /* transform: translate(50px); */
     background: transparent;
 }
 
-.asideWrapper.active .burgerBtn::before {
-    transform: rotate(45deg) translate(-35px, 35px);
+.burgerActive .burgerBtn::before {
+    transform: rotate(45deg);
+    background: var(--white);
 
 }
 
-.asideWrapper.active .burgerBtn::after {
-    transform: rotate(-45deg) translate(-35px, -35px);
+.burgerActive .burgerBtn::after {
+    transform: rotate(-45deg);
 }
 
 
@@ -58,34 +66,39 @@
     right: 0;
     top: 0;
     height: 100dvh;
-    width: 60vw;
-    background-color: var(--cl-main-light);
-    transform: translateX(100%);
-    opacity: 1;
+    width: 100%;
+    background-color: var(--cl-main-dark);
+    transform: translateY(100%);
+    opacity: 0;
 
     /* variable so the anchor takles the whole space */
     --margin-inline: 1.5rem;
     padding-inline: var(--margin-inline);
     padding-block: 1rem;
-    transition: all 1s ease;
+    padding: 1.5rem 1rem;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
 }
 
-.asideWrapper.active {
-    transform: translateX(0);
+.burgerActive .asideWrapper {
     opacity: 1;
+    transform: translateY(0);
 }
 
-.asideWrapper.active .closeBtn {}
-
-@keyframes toClose {
-    0% {
-        opacity: 0;
-    }
+.backToTop {
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 0.7rem;
+    color: var(--white);
+    margin-right: auto;
 }
 
 /* Nav styles */
 .navWrapper {
-    margin-top: 2rem;
+    margin-top: 5rem;
 }
 
 .navWrapper ul {
@@ -93,25 +106,30 @@
 }
 
 .navWrapper li a {
-    padding: 1.5rem;
+    padding: 1rem;
     display: block;
     text-transform: lowercase;
     text-decoration: none;
+    text-align: center;
+    font-size: 1.3rem;
     color: inherit;
     color: var(--white);
-    margin-inline: calc(-1 * (var(--margin-inline)));
+    /* margin-inline: calc(-1 * (var(--margin-inline))); */
+    transition: 0.2s ease;
 }
 
 .navWrapper li a:hover {
-    background: var(--cl-main-dark);
+    transform: scale(1.2);
 }
 
 .navWrapper li a::before {
     content: "_"
 }
 
-.asideWrapper.active .burgerBtn,
-.asideWrapper.active .burgerBtn::before,
-.asideWrapper.active .burgerBtn::after {
-    transition: transform 1s ease;
+.navWrapper li>a:hover::before {
+    color: var(--cl-accent)
+}
+
+.contact::before {
+    color: var(--cl-more-accent);
 }

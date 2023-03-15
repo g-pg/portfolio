@@ -2,6 +2,11 @@
     width: 50%;
 }
 
+.sectionWrapper p {
+    font-family: var(--roboto);
+    text-align: justify;
+}
+
 @media (max-width: 780px) {
     .sectionWrapper {
         width: 80%;

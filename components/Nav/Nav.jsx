@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import desktopNav from "./DesktopNav.module.css";
 import burgerNav from "./BurgerNav.module.css";
 import LnIcon from "@svg/icons/linkedin-icon.svg";
 import GhIcon from "@svg/icons/github-icon.svg";
 import classNames from "classnames";
 import Link from "next/link";
+import SocialBox from "@components/SocialBox/SocialBox";
 
 export function MainNav({ type }) {
 	return (
@@ -21,7 +22,9 @@ export function MainNav({ type }) {
 						<a href="#about">Sobre Mim</a>
 					</li>
 					<li>
-						<a href="#contact">Contato</a>
+						<a href="#contact" className={type.contact}>
+							Contato
+						</a>
 					</li>
 				</ul>
 			</div>
@@ -32,25 +35,45 @@ export function MainNav({ type }) {
 function BurgerNav() {
 	const [showBurger, setShowBurger] = useState(false);
 
-	function BurgerBtn() {
-		return (
-			<div
-				className={burgerNav.burgerContainer}
-				onClick={() => setShowBurger(!showBurger)}
-			>
-				<div className={burgerNav.burgerBtn}></div>
-			</div>
-		);
-	}
+	const asideRef = useRef(null);
+	// useEffect(() => {
+	// 	document.body.style.overflow = showBurger ? "hidden" : "unset";
+	// }, [showBurger]);
+
+	useEffect(() => {
+		const aside = asideRef.current;
+		function closeBurger(e) {
+			e.stopPropagation();
+			if (asideRef.current.contains(e.target)) {
+				setShowBurger(false);
+			}
+		}
+		aside.addEventListener("click", closeBurger);
+
+		return () => {
+			aside.removeEventListener("click", closeBurger);
+		};
+	}, [showBurger]);
 
 	return (
-		<>
-			<BurgerBtn />
-			<div className={classNames(burgerNav.asideWrapper, showBurger && burgerNav.active)}>
-				<BurgerBtn />
-				<MainNav type={burgerNav} />
+		<div className={showBurger ? burgerNav.burgerActive : ""}>
+			<div
+				className={classNames(burgerNav.burgerContainer)}
+				onClick={() => setShowBurger((prev) => !prev)}
+			>
+				<div className={classNames(burgerNav.burgerBtn)}></div>
 			</div>
-		</>
+
+			<div className={classNames(burgerNav.asideWrapper)} ref={asideRef}>
+				<a href="#hero-section" className={burgerNav.backToTop}>
+					Voltar ao topo
+				</a>
+				<MainNav type={burgerNav} />
+				<div className={burgerNav.socialBox}>
+					<SocialBox />
+				</div>
+			</div>
+		</div>
 	);
 }
 

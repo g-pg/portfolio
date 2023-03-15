@@ -18,7 +18,6 @@
 
 .navWrapper li:hover {
     transform: translateY(2px);
-    filter: brightness(5)
 }
 
 
@@ -30,40 +29,16 @@
 
 .navWrapper li>a::before {
     content: "_";
-
 }
 
-/* Social wrapper */
-.socialWrapper {
-    --align-gap: 1rem;
+.navWrapper li>a:hover::before {
+    color: var(--cl-accent);
 }
 
-.socialIcon {
-    width: 35px;
-    color: var(--white);
+.contact::before {
+    color: var(--cl-more-accent)
 }
 
-.socialIcon:hover {
-    transform: scale(1.15);
-    transition: 0.15s ease;
-}
-
-.socialIcon.ln:hover {
-    color: var(--ln-blue)
-}
-
-.socialIcon.gh:hover {
-    color: var(--gh-purple)
-}
-
-
-.burgerBtn {}
-
-.burgerLine {
-    width: 20px;
-    background: var(--white);
-    height: 10px;
-}
 
 
 @media (max-width: 768px) {

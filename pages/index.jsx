@@ -16,8 +16,9 @@ export default function Home() {
 				{/* <link rel="icon" href="/favicon.ico" /> */}
 			</Head>
 			<div
+				id="hero-section"
 				style={{
-					height: "100dvh",
+					minHeight: "100dvh",
 				}}
 			>
 				<Header />
