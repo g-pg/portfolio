@@ -1,1 +1,82 @@
-rfc
+.formWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 auto;
+    max-width: 500px;
+    font-family: var(--roboto);
+    color: var(--white)
+}
+
+.formWrapper input,
+.formWrapper textarea {
+    display: inline-block;
+    background: var(--cl-main-light);
+    color: var(--white);
+    border: 1px solid var(--white);
+    padding: 8px 10px;
+    width: 100%;
+
+}
+
+.formWrapper input:-webkit-autofill,
+.formWrapper textarea:-webkit-autofill,
+.formWrapper select:-webkit-autofill {
+    /* -webkit-text-fill-color: rgba(0, 0, 0, 0); */
+    box-shadow: 0 0 0 1000px var(--cl-main-dark) inset !important;
+    -webkit-box-shadow: 0 0 0px 1000px var(--cl-main-dark) inset !important;
+    -webkit-text-fill-color: var(--white) !important;
+}
+
+.formWrapper input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--cl-accent);
+    outline: none;
+
+}
+
+.formWrapper textarea {
+    margin-top: 1rem;
+    height: 300px;
+    border: 1px solid var(--cl-accent);
+    outline: none;
+    border-radius: 6px;
+    resize: none;
+}
+
+/* Btn */
+.formWrapper [type=submit] {
+    background: var(--cl-accent);
+    border: 1px solid var(--cl-main-dark);
+    padding: 0.5rem 1.5rem;
+    box-shadow: -2px 4px 8px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    width: 50%;
+    margin-top: 1rem;
+}
+
+
+.formWrapper [type=submit]:hover {
+    background: var(--cl-accent-dark);
+
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+
+    .formWrapper {
+        align-items: center;
+    }
+
+    .name,
+    .email,
+    .message {
+        /* max-width: 80%; */
+        /* min-width: 80%; */
+    }
+}
