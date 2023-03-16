@@ -8,6 +8,7 @@ import GhIcon from "@svg/icons/github-icon.svg";
 
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
+import HomeSectionLayout from "../HomeSectionLayout/HomeSectionLayout";
 
 //  ---------- Cards ----------- //
 function ProjectCard({ id, name, description, ghLink, liveLink, img, tools, tags, favorite }) {
@@ -15,7 +16,10 @@ function ProjectCard({ id, name, description, ghLink, liveLink, img, tools, tags
 	return (
 		<>
 			<div
-				className={classNames(styles.projectContainer, inView ? "inView" : "notInView")}
+				className={classNames(
+					styles.projectContainer,
+					inView ? styles.inView : styles.notInView
+				)}
 				style={{
 					backgroundImage: `url(${img.desktop})`,
 				}}
@@ -40,21 +44,17 @@ function ProjectCard({ id, name, description, ghLink, liveLink, img, tools, tags
 }
 
 export default function ProjectsSection() {
-	const { ref: sectionRef, inView } = useInView({ triggerOnce: true });
 	return (
-		<section
-			className={classNames("home-section", inView ? "inView" : "notInView")}
-			id="projects"
-			ref={sectionRef}
+		<HomeSectionLayout
+			sectionId="projects"
+			sectionWrapper={styles.sectionWrapper}
+			sectionTitle={"Projetos"}
 		>
-			<div className={classNames("container", styles.sectionWrapper)}>
-				<h3 className="section-title">Projetos</h3>
-				<div className={classNames(styles.projectsWrapper)}>
-					{projects.map((el) => {
-						return <ProjectCard key={el.id} {...el} />;
-					})}
-				</div>
+			<div className={classNames(styles.projectsWrapper)}>
+				{projects.map((el) => {
+					return <ProjectCard key={el.id} {...el} />;
+				})}
 			</div>
-		</section>
+		</HomeSectionLayout>
 	);
 }

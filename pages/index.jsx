@@ -3,6 +3,7 @@ import AboutSection from "@components/Pages/Home/AboutSection/AboutSection";
 import HomeHero from "@components/Pages/Home/HeroSection/HomeHero";
 import ProjectsSection from "@components/Pages/Home/ProjectsSection/ProjectsSection";
 import SkillsSection from "@components/Pages/Home/SkillsSection/SkillsSection";
+import ContactSection from "@components/Pages/Home/ContactSection/ContactSection";
 import Head from "next/head";
 import Header from "@components/Header/Header";
 
@@ -33,6 +34,7 @@ export default function Home() {
 
 			<AboutSection />
 
+			<ContactSection />
 			<Footer />
 		</>
 	);

@@ -70,48 +70,11 @@ html {
   scroll-behavior: smooth;
 }
 
-.home-section {
-  margin-bottom: 25vh;
-  scroll-margin-top: 1rem;
-  min-height: 30vh;
-  /* display: grid;
-  place-items: center; */
-}
-
 @media (max-width: 768px) {
   section {
     padding-inline: 1rem;
 
   }
-}
-
-/* Títulos e texto */
-
-.section-title {
-  color: lightgray;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  text-align: center;
-  font-weight: 700;
-  text-transform: lowercase;
-}
-
-.section-title::before {
-  content: "_"
-}
-
-/*----  General scroll animations ---- */
-.notInView {
-  /* filter: blur(3px); */
-  opacity: 0;
-  transform: translateX(-300px);
-}
-
-.inView {
-  /* filter: blur(0); */
-  opacity: 1;
-  transition: all 0.5s ease;
-  transform: translateX(0);
 }
 
 /* Utility classes */

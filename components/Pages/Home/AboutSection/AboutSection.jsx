@@ -1,20 +1,17 @@
-import classNames from "classnames";
 import React from "react";
 import { useInView } from "react-intersection-observer";
+
+import HomeSectionLayout from "../HomeSectionLayout/HomeSectionLayout";
+import classNames from "classnames";
 import styles from "./AboutSection.module.css";
 export default function AboutSection() {
 	const { ref: sectionRef, inView } = useInView({ triggerOnce: true });
 	return (
-		<section
-			id="about"
-			className={classNames(
-				"home-section container",
-				inView ? "inView" : "notInView",
-				styles.sectionWrapper
-			)}
-			ref={sectionRef}
+		<HomeSectionLayout
+			sectionId="about"
+			sectionWrapper={styles.sectionWrapper}
+			sectionTitle={"Sobre mim"}
 		>
-			<h3 className="section-title">Sobre mim</h3>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem adipisci, quod
 				blanditiis, quas doloremque pariatur natus porro sapiente illum quisquam alias
@@ -27,6 +24,6 @@ export default function AboutSection() {
 				perspiciatis inventore non repudiandae? Amet, ab fugiat tempore quos, eius
 				repellat ullam vitae, dolorum fuga earum aperiam dolores.
 			</p>
-		</section>
+		</HomeSectionLayout>
 	);
 }
