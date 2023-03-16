@@ -11,14 +11,15 @@ import { useInView } from "react-intersection-observer";
 
 //  ---------- Cards ----------- //
 function ProjectCard({ id, name, description, ghLink, liveLink, img, tools, tags, favorite }) {
+	const { ref: projectRef, inView } = useInView();
 	return (
 		<>
-			{/* <div className={styles.projectWrapper}> */}
 			<div
-				className={classNames(styles.projectContainer)}
+				className={classNames(styles.projectContainer, inView ? "inView" : "notInView")}
 				style={{
 					backgroundImage: `url(${img.desktop})`,
 				}}
+				ref={projectRef}
 			>
 				<div className={styles.projectText}>
 					<h4 className={styles.projectTitle}>{name}</h4>
@@ -34,14 +35,12 @@ function ProjectCard({ id, name, description, ghLink, liveLink, img, tools, tags
 				</div>
 				<div className={styles.overlay}></div>
 			</div>
-
-			{/* </div> */}
 		</>
 	);
 }
 
 export default function ProjectsSection() {
-	const { ref: sectionRef, inView } = useInView({ threshold: 0.05 });
+	const { ref: sectionRef, inView } = useInView();
 	return (
 		<section
 			className={classNames("home-section", inView ? "inView" : "notInView")}
@@ -50,13 +49,9 @@ export default function ProjectsSection() {
 		>
 			<div className={classNames("container", styles.sectionWrapper)}>
 				<h3 className="section-title">Projetos</h3>
-				<div className={classNames(styles.projectsWrapper, inView && styles.inView)}>
+				<div className={classNames(styles.projectsWrapper)}>
 					{projects.map((el) => {
-						return (
-							// <div key={el.id} className={styles.project}>
-							<ProjectCard key={el.id} {...el} />
-							// </div>
-						);
+						return <ProjectCard key={el.id} {...el} />;
 					})}
 				</div>
 			</div>

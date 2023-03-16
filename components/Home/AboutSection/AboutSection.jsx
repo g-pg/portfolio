@@ -3,7 +3,7 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 import styles from "./AboutSection.module.css";
 export default function AboutSection() {
-	const { ref: sectionRef, inView } = useInView({ threshold: 0.05 });
+	const { ref: sectionRef, inView } = useInView();
 	return (
 		<section
 			id="about"
