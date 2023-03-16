@@ -102,13 +102,13 @@ html {
 
 /*----  General scroll animations ---- */
 .notInView {
-  filter: blur(3px);
+  /* filter: blur(3px); */
   opacity: 0;
   transform: translateX(-300px);
 }
 
 .inView {
-  filter: blur(0);
+  /* filter: blur(0); */
   opacity: 1;
   transition: all 0.8s ease;
 
