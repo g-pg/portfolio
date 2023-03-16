@@ -9,7 +9,7 @@ import classNames from "classnames";
 import { useInView } from "react-intersection-observer";
 
 export default function SkillsSection() {
-	const { ref: sectionRef, inView } = useInView();
+	const { ref: sectionRef, inView } = useInView({ triggerOnce: true });
 	console.log(inView);
 
 	return (

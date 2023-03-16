@@ -1,8 +1,8 @@
 import Footer from "@components/Footer/Footer";
-import AboutSection from "@components/Home/AboutSection/AboutSection";
-import HomeHero from "@components/Home/HeroSection/HomeHero";
-import ProjectsSection from "@components/Home/ProjectsSection/ProjectsSection";
-import SkillsSection from "@components/Home/SkillsSection/SkillsSection";
+import AboutSection from "@components/Pages/Home/AboutSection/AboutSection";
+import HomeHero from "@components/Pages/Home/HeroSection/HomeHero";
+import ProjectsSection from "@components/Pages/Home/ProjectsSection/ProjectsSection";
+import SkillsSection from "@components/Pages/Home/SkillsSection/SkillsSection";
 import Head from "next/head";
 import Header from "@components/Header/Header";
 

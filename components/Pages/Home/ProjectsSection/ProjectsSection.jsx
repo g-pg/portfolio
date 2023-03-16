@@ -2,7 +2,7 @@ import classNames from "classnames";
 import React from "react";
 import styles from "./ProjectsSection.module.css";
 
-import projects from "../../../data/projects.json";
+import projects from "@data/projects.json";
 import LinkIcon from "@svg/icons/link-icon.svg";
 import GhIcon from "@svg/icons/github-icon.svg";
 
@@ -11,7 +11,7 @@ import { useInView } from "react-intersection-observer";
 
 //  ---------- Cards ----------- //
 function ProjectCard({ id, name, description, ghLink, liveLink, img, tools, tags, favorite }) {
-	const { ref: projectRef, inView } = useInView();
+	const { ref: projectRef, inView } = useInView({ triggerOnce: true });
 	return (
 		<>
 			<div
@@ -40,7 +40,7 @@ function ProjectCard({ id, name, description, ghLink, liveLink, img, tools, tags
 }
 
 export default function ProjectsSection() {
-	const { ref: sectionRef, inView } = useInView();
+	const { ref: sectionRef, inView } = useInView({ triggerOnce: true });
 	return (
 		<section
 			className={classNames("home-section", inView ? "inView" : "notInView")}

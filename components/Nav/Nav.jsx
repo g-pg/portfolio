@@ -43,7 +43,7 @@ function BurgerNav() {
 	useEffect(() => {
 		const aside = asideRef.current;
 		function closeBurger(e) {
-			// e.stopPropagation();
+			e.stopPropagation();
 			if (e.target != aside) {
 				setShowBurger(false);
 			}
@@ -65,7 +65,7 @@ function BurgerNav() {
 			</div>
 
 			<div className={classNames(burgerNav.asideWrapper)} ref={asideRef}>
-				<a href="#hero-section" className={burgerNav.backToTop}>
+				<a href="#" className={burgerNav.backToTop}>
 					Voltar ao topo
 				</a>
 				<MainNav type={burgerNav} />

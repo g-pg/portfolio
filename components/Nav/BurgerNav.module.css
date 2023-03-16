@@ -14,9 +14,7 @@
     border-radius: 50%;
     top: 1rem;
     right: 0.6rem;
-    /* background: var(--white); */
-    backdrop-filter: blur(5px);
-
+    backdrop-filter: blur(3px);
 }
 
 
@@ -44,7 +42,6 @@
 
 
 .burgerActive .burgerBtn {
-    /* transform: translate(50px); */
     background: transparent;
 }
 
@@ -71,16 +68,11 @@
     transform: translateY(100%);
     opacity: 0;
 
-    /* variable so the anchor takles the whole space */
-    --margin-inline: 1.5rem;
-    padding-inline: var(--margin-inline);
-    padding-block: 1rem;
     padding: 1.5rem 1rem;
     transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
     gap: 5rem;
+    display: grid;
 }
 
 .burgerActive .asideWrapper {
@@ -94,11 +86,13 @@
     font-size: 0.7rem;
     color: var(--white);
     margin-right: auto;
+    place-self: start;
 }
 
 /* Nav styles */
-.navWrapper {
-    margin-top: 5rem;
+.asideWrapper nav {
+    place-self: center;
+    width: 100%;
 }
 
 .navWrapper ul {
@@ -114,7 +108,7 @@
     font-size: 1.3rem;
     color: inherit;
     color: var(--white);
-    /* margin-inline: calc(-1 * (var(--margin-inline))); */
+
     transition: 0.2s ease;
 }
 
@@ -132,4 +126,12 @@
 
 .contact::before {
     color: var(--cl-more-accent);
+}
+
+.contact {
+    composes: contact from "./DesktopNav.module.css";
+}
+
+.socialBox {
+    margin: 0 auto;
 }

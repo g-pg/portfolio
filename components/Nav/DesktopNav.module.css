@@ -36,7 +36,7 @@
 }
 
 .contact::before {
-    color: var(--cl-more-accent)
+    color: var(--cl-more-accent);
 }
 
 

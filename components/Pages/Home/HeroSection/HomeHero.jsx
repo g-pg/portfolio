@@ -11,7 +11,7 @@ import MaximizeIcon from "@svg/maximize.svg";
 import CloseIcon from "@svg/close.svg";
 
 import SocialBox from "@components/SocialBox/SocialBox";
-import Tape from "../../../public/img/tape4.png";
+import Tape from "@img/tape4.png";
 export default function HomeHero() {
 	const [isTyping, setIsTyping] = useState(true);
 	const [minimized, setMinimized] = useState(false);
@@ -39,7 +39,7 @@ export default function HomeHero() {
 							)}
 						>
 							<div className={classNames(styles.frameBar, "flex-align")}>
-								<a href="#hero-section" className={styles.fileName}>
+								<a href="#" className={styles.fileName}>
 									heroSection.jsx
 								</a>
 								<div className={classNames(styles.controls, "flex-align")}>
