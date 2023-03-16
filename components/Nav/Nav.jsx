@@ -36,14 +36,14 @@ function BurgerNav() {
 	const [showBurger, setShowBurger] = useState(false);
 
 	const asideRef = useRef(null);
-	// useEffect(() => {
-	// 	document.body.style.overflow = showBurger ? "hidden" : "unset";
-	// }, [showBurger]);
+	useEffect(() => {
+		document.body.style.overflow = showBurger ? "hidden" : "unset";
+	}, [showBurger]);
 
 	useEffect(() => {
 		const aside = asideRef.current;
 		function closeBurger(e) {
-			e.stopPropagation();
+			// e.stopPropagation();
 			if (e.target != aside) {
 				setShowBurger(false);
 			}
