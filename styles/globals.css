@@ -55,6 +55,7 @@
 @media (max-width: 768px) {
   .container {
     width: 100%;
+
   }
 }
 
@@ -69,10 +70,19 @@ html {
   scroll-behavior: smooth;
 }
 
-section {
-  margin-bottom: 15vh;
+.home-section {
+  margin-bottom: 25vh;
   scroll-margin-top: 1rem;
-  padding-inline: 1rem;
+  min-height: 30vh;
+  /* display: grid;
+  place-items: center; */
+}
+
+@media (max-width: 768px) {
+  section {
+    padding-inline: 1rem;
+
+  }
 }
 
 /* Títulos e texto */
@@ -88,6 +98,20 @@ section {
 
 .section-title::before {
   content: "_"
+}
+
+/*----  General scroll animations ---- */
+.notInView {
+  filter: blur(3px);
+  opacity: 0;
+  transform: translateX(-300px);
+}
+
+.inView {
+  filter: blur(0);
+  opacity: 1;
+  transition: all 0.8s ease;
+
 }
 
 /* Utility classes */

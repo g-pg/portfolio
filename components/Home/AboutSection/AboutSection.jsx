@@ -1,9 +1,19 @@
 import classNames from "classnames";
 import React from "react";
+import { useInView } from "react-intersection-observer";
 import styles from "./AboutSection.module.css";
 export default function AboutSection() {
+	const { ref: sectionRef, inView } = useInView({ threshold: 0.05 });
 	return (
-		<section className={classNames("home-section container", styles.sectionWrapper)}>
+		<section
+			id="about"
+			className={classNames(
+				"home-section container",
+				inView ? "inView" : "notInView",
+				styles.sectionWrapper
+			)}
+			ref={sectionRef}
+		>
 			<h3 className="section-title">Sobre mim</h3>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem adipisci, quod

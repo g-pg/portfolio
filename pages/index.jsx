@@ -4,8 +4,10 @@ import HomeHero from "@components/Home/HeroSection/HomeHero";
 import ProjectsSection from "@components/Home/ProjectsSection/ProjectsSection";
 import SkillsSection from "@components/Home/SkillsSection/SkillsSection";
 import Head from "next/head";
-import Image from "next/image";
 import Header from "@components/Header/Header";
+
+import React from "react";
+
 export default function Home() {
 	return (
 		<>
@@ -24,9 +26,13 @@ export default function Home() {
 				<Header />
 				<HomeHero />
 			</div>
+
 			<SkillsSection />
+
 			<ProjectsSection />
+
 			<AboutSection />
+
 			<Footer />
 		</>
 	);

@@ -7,6 +7,9 @@ import LinkIcon from "@svg/icons/link-icon.svg";
 import GhIcon from "@svg/icons/github-icon.svg";
 
 import Link from "next/link";
+import { useInView } from "react-intersection-observer";
+
+//  ---------- Cards ----------- //
 function ProjectCard({ id, name, description, ghLink, liveLink, img, tools, tags, favorite }) {
 	return (
 		<>
@@ -38,13 +41,22 @@ function ProjectCard({ id, name, description, ghLink, liveLink, img, tools, tags
 }
 
 export default function ProjectsSection() {
+	const { ref: sectionRef, inView } = useInView({ threshold: 0.05 });
 	return (
-		<section className="home-section" id="projects">
+		<section
+			className={classNames("home-section", inView ? "inView" : "notInView")}
+			id="projects"
+			ref={sectionRef}
+		>
 			<div className={classNames("container", styles.sectionWrapper)}>
 				<h3 className="section-title">Projetos</h3>
-				<div className={styles.projectsWrapper}>
+				<div className={classNames(styles.projectsWrapper, inView && styles.inView)}>
 					{projects.map((el) => {
-						return <ProjectCard key={el.id} {...el} />;
+						return (
+							// <div key={el.id} className={styles.project}>
+							<ProjectCard key={el.id} {...el} />
+							// </div>
+						);
 					})}
 				</div>
 			</div>

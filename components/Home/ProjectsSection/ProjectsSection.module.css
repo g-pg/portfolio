@@ -31,12 +31,19 @@
     background-size: cover;
     min-height: 25vh;
     background-repeat: no-repeat;
-    transition: background-position 2s ease;
+    transition: background-position 2s ease, transform 0.8s ease, opacity 0.8s ease;
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 15px 25px, rgba(0, 0, 0, 0.22) 0px 10px 12px;
     overflow: hidden;
-
+    transform: translateX(-300px);
+    opacity: 0;
 }
+
+.projectsWrapper.inView .projectContainer {
+    transform: translate(0);
+    opacity: 1;
+}
+
 
 .projectText {
     position: absolute;
@@ -136,29 +143,79 @@
     transition: background-position 3s ease;
 }
 
+
+
+
 .projectContainer:nth-child(1) {
     grid-area: wordle;
+    transition-delay: 0.2s;
 }
 
 
 .projectContainer:nth-child(2) {
     grid-area: malu;
+
+    transition-delay: 0.1s;
+
 }
 
 .projectContainer:nth-child(3) {
     grid-area: ecommerce;
+
+
+    transition-delay: 0.3s;
 }
 
 .projectContainer:nth-child(4) {
     grid-area: dropdown;
+
+    transition-delay: 0.2s;
 }
 
 .projectContainer:nth-child(5) {
     grid-area: todo;
+
+    transition-delay: 0.2s;
 }
 
 .projectContainer:nth-child(6) {
     grid-area: six;
+    transition-delay: 0.1s;
+}
+
+
+/* inView transitions */
+.project {
+    transition: all 0.8s ease;
+    transform: translateX(-300px);
+}
+
+.projectsWrapper.inView .project {
+    transform: translateX(0);
+}
+
+.projectsWrapper.inView .project:nth-child(1) {
+    transition-delay: 0.5s;
+}
+
+.projectsWrapper.inView .project:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.projectsWrapper.inView .project:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.projectsWrapper.inView .project:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+.projectsWrapper.inView .project:nth-child(5) {
+    transition-delay: 0.2s;
+}
+
+.projectsWrapper.inView .project:nth-child(6) {
+    transition-delay: 0.7s;
 }
 
 @media (max-width: 768px) {
@@ -168,7 +225,13 @@
             'ecommerce malu'
             'dropdown malu'
             'todo todo';
-
+        grid-template-areas:
+            'wordle'
+            'ecommerce'
+            'malu'
+            'dropdown'
+            'todo';
+        /* grid-template-columns: max-content; */
         width: 100%;
         background-position: center;
     }
