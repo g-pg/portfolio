@@ -11,12 +11,6 @@ export default function ContactForm() {
 		});
 	}
 
-	// function encode(data) {
-	// 	return Object.keys(data)
-	// 		.map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-	// 		.join("&");
-	// }
-
 	function handleSubmit(e) {
 		e.preventDefault();
 		const myForm = e.target;
@@ -47,9 +41,9 @@ export default function ContactForm() {
 				onSubmit={(e) => handleSubmit(e)}
 				// action="/?success=true"
 				data-netlify="true"
+				data-netlify-recaptcha="true"
 			>
 				<input type="hidden" name="form-name" value="contact" />
-
 				<input
 					type="text"
 					placeholder="Nome"
@@ -74,10 +68,18 @@ export default function ContactForm() {
 					className={styles.message}
 					value={fields.message}
 					onChange={handleChange}
+					required
 				></textarea>
-				<input type="submit" value="Enviar"></input>
+				{!submitMessage ? (
+					<input type="submit" value="Enviar"></input>
+				) : (
+					<p className={styles.sentMessage}>{submitMessage} </p>
+				)}
+				{!submitMessage && fields.message.length > 1 && (
+					<div data-netlify-recaptcha="true"></div>
+				)}
+				{/* {submitMessage && <p className={styles.sentMessage}>{submitMessage} </p>} */}
 			</form>
-			{submitMessage && <p className={styles.sentMessage}>{submitMessage} </p>}
 		</>
 	);
 }
