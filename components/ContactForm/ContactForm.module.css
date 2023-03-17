@@ -66,6 +66,11 @@
 
 }
 
+.sentMessage {
+    margin-top: 2rem;
+    text-align: center;
+}
+
 /* Media queries */
 @media (max-width: 768px) {
 

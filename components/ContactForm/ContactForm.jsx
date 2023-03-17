@@ -1,20 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./ContactForm.module.css";
 export default function ContactForm() {
 	const [fields, setFields] = useState({ name: "", email: "", message: "" });
 
-	const [sent, setSent] = useState(false);
+	const [submitMessage, setSubmitMessage] = useState("");
+
 	function handleChange(e) {
 		setFields((prevFields) => {
 			return { ...prevFields, [e.target.name]: e.target.value };
 		});
 	}
 
-	function encode(data) {
-		return Object.keys(data)
-			.map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-			.join("&");
-	}
+	// function encode(data) {
+	// 	return Object.keys(data)
+	// 		.map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+	// 		.join("&");
+	// }
 
 	function handleSubmit(e) {
 		e.preventDefault();
@@ -24,15 +25,18 @@ export default function ContactForm() {
 		fetch("/", {
 			method: "POST",
 			headers: { "Content-Type": "application/x-www-form-urlencoded" },
-			body: encode({ "form-name": "contact", ...fields }),
+			body: new URLSearchParams(formData).toString(),
 		})
-			.then(() => setSent(true))
-			.catch((error) => alert(error));
-	}
+			.then(() => setSubmitMessage("Obrigado! Vou responder assim que possível."))
+			.catch((error) => {
+				console.log(error);
+				setSubmitMessage(
+					"Oops, alguma coisa deu errado. Tente novamente em alguns minutos ou me mande um e-mail!"
+				);
+			});
 
-	useEffect(() => {
-		// console.log(fields);
-	}, [fields]);
+		setFields({ name: "", email: "", message: "" });
+	}
 
 	return (
 		<>
@@ -73,8 +77,7 @@ export default function ContactForm() {
 				></textarea>
 				<input type="submit" value="Enviar"></input>
 			</form>
-
-			{sent && <p> Obrigado por me enviar a mensagem! </p>}
+			{submitMessage && <p className={styles.sentMessage}>{submitMessage} </p>}
 		</>
 	);
 }
