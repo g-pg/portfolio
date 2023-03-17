@@ -8,6 +8,7 @@ import Head from "next/head";
 import Header from "@components/Header/Header";
 
 import React from "react";
+import ShortAbout from "@components/Pages/Home/ShortAbout/ShortAbout";
 
 export default function Home() {
 	return (
@@ -27,7 +28,7 @@ export default function Home() {
 				<Header />
 				<HomeHero />
 			</div>
-
+			<ShortAbout />
 			<SkillsSection />
 
 			<ProjectsSection />
