@@ -18,7 +18,7 @@ export default function ContactForm() {
 		fetch("/", {
 			method: "POST",
 			headers: { "Content-Type": "application/x-www-form-urlencoded" },
-			body: new URLSearchParams(formData).toString(),
+			body: formData,
 		})
 			.then(() => setSent(true))
 			.catch((error) => alert(error));
