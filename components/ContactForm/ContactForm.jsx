@@ -10,6 +10,12 @@ export default function ContactForm() {
 		});
 	}
 
+	function encode(data) {
+		return Object.keys(data)
+			.map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+			.join("&");
+	}
+
 	function handleSubmit(e) {
 		e.preventDefault();
 		const myForm = e.target;
