@@ -6,7 +6,7 @@ export default function ContactForm() {
 	const [sent, setSent] = useState(false);
 	function handleChange(e) {
 		setFields((prevFields) => {
-			return { ...prevFields, [e.target.id]: e.target.value };
+			return { ...prevFields, [e.target.name]: e.target.value };
 		});
 	}
 
@@ -41,7 +41,7 @@ export default function ContactForm() {
 				method="POST"
 				className={styles.formWrapper}
 				onSubmit={(e) => handleSubmit(e)}
-				action="/?success=true"
+				// action="/?success=true"
 				data-netlify="true"
 			>
 				<input type="hidden" name="form-name" value="contact" />
@@ -49,7 +49,7 @@ export default function ContactForm() {
 				<input
 					type="text"
 					placeholder="Nome"
-					id="name"
+					name="name"
 					required
 					className={styles.name}
 					value={fields.name}
@@ -58,14 +58,14 @@ export default function ContactForm() {
 				<input
 					type="email"
 					placeholder="E-mail"
-					id="email"
+					name="email"
 					required
 					value={fields.email}
 					className={styles.email}
 					onChange={handleChange}
 				></input>
 				<textarea
-					id="message"
+					name="message"
 					placeholder="Mensagem"
 					className={styles.message}
 					value={fields.message}
