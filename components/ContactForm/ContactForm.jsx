@@ -41,7 +41,7 @@ export default function ContactForm() {
 				onSubmit={(e) => handleSubmit(e)}
 				// action="/?success=true"
 				data-netlify="true"
-				data-netlify-recaptcha="true"
+				// data-netlify-recaptcha="true"
 			>
 				<input type="hidden" name="form-name" value="contact" />
 				<input
@@ -70,9 +70,12 @@ export default function ContactForm() {
 					onChange={handleChange}
 					required
 				></textarea>
-				<input type="submit" value="Enviar"></input>
-
-				<div data-netlify-recaptcha="true"></div>
+				{!submitMessage ? (
+					<input type="submit" value="Enviar"></input>
+				) : (
+					<p className={styles.sentMessage}>{submitMessage} </p>
+				)}
+				{/* <div data-netlify-recaptcha="true"></div> */}
 
 				{/* {submitMessage && <p className={styles.sentMessage}>{submitMessage} </p>} */}
 			</form>
