@@ -28,7 +28,7 @@
 .projectContainer {
     position: relative;
     background-size: cover;
-    min-height: 25vh;
+    min-height: 26vh;
     background-repeat: no-repeat;
     transition: background-position 2s ease, transform 0.8s ease, opacity 0.8s ease;
     border-radius: 8px;
@@ -54,16 +54,16 @@
 }
 
 .projectText h4 {
-    font-size: 1.2rem;
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
     margin-bottom: auto;
     width: 70%;
     text-shadow: rgba(0, 0, 0, 0.4) 0px 3px 3px;
 }
 
 .projectText p {
-    font-size: 1rem;
+    font-size: clamp(0.7rem, 1.2vw, 1rem);
     font-weight: 300;
-    width: 60%;
+    width: 70%;
     text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
 }
 
@@ -204,16 +204,16 @@
     }
 
     .linkIcon {
-        width: 15px;
-        height: 15px;
+        width: 20px;
+        height: 20px;
     }
 
     .projectText h4 {
-        font-size: 0.8rem;
+        /* font-size: 0.8rem; */
     }
 
     .projectText p {
-        font-size: 0.6rem;
+        /* font-size: 0.6rem; */
         width: 100%;
     }
 
