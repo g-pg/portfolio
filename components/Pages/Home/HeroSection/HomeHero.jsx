@@ -34,8 +34,8 @@ export default function HomeHero() {
 							className={classNames(
 								styles.frameWrapper,
 								isTyping ? styles.typing : styles.noTyping,
-								minimized ? styles.minimized : "",
-								maximized ? styles.maximized : ""
+								minimized && styles.minimized,
+								maximized && styles.maximized
 							)}
 						>
 							<div className={classNames(styles.frameBar, "flex-align")}>
@@ -67,9 +67,9 @@ export default function HomeHero() {
 								<Typewriter
 									onInit={(typewriter) => {
 										typewriter
-											.pauseFor(500)
+											.pauseFor(800)
 											// .changeDelay(200)
-											.changeDelay(40)
+											.changeDelay(30)
 											.typeString("<")
 											.typeString("h2>")
 											.typeString(

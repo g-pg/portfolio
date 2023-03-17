@@ -12,7 +12,7 @@ export default function AboutSection() {
 			sectionWrapper={styles.sectionWrapper}
 			sectionTitle={"Sobre mim"}
 		>
-			<p>
+			<p className={styles.primaryText}>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem adipisci, quod
 				blanditiis, quas doloremque pariatur natus porro sapiente illum quisquam alias
 				sed. Placeat, soluta ullam! Inventore et similique laboriosam officia, vitae

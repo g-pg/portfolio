@@ -17,7 +17,7 @@ export default function SkillsSection() {
 		<HomeSectionLayout
 			sectionId={"skills"}
 			sectionWrapper={styles.sectionWrapper}
-			sectionTitle={"Skillset"}
+			// sectionTitle={"Skillset"}
 		>
 			<div
 				className={classNames(styles.cardsWrapper, inView && styles.inView)}
