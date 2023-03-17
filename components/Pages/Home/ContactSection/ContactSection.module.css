@@ -1,8 +1,13 @@
-.sectionWrapper {}
+.sectionWrapper p {}
+
+.primaryText {
+    composes: primaryText from "../HomeSectionLayout/HomeSectionLayout.module.css";
+    text-align: center !important;
+}
+
+.primaryText a {}
 
 .formWrapper {
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
+    margin-top: 5rem;
 
 }

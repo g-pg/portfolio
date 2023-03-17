@@ -79,7 +79,6 @@ export default function ContactForm() {
 
 				{/* {submitMessage && <p className={styles.sentMessage}>{submitMessage} </p>} */}
 			</form>
-			<p className={styles.sentMessage}>{submitMessage} </p>
 		</>
 	);
 }

@@ -44,11 +44,12 @@
     outline: none;
     border-radius: 6px;
     resize: none;
+    border: none;
 }
 
 /* Btn */
 .formWrapper [type=submit] {
-    background: var(--cl-accent);
+    background: var(--white);
     border: 1px solid var(--cl-main-dark);
     padding: 0.5rem 1.5rem;
     box-shadow: -2px 4px 8px rgba(0, 0, 0, 0.5);
@@ -58,15 +59,18 @@
     border-radius: 6px;
     width: 50%;
     margin-top: 1rem;
+    color: var(--cl-main-dark);
 }
 
 
 .formWrapper [type=submit]:hover {
     background: var(--cl-accent-dark);
+    color: var(--white);
 
 }
 
 .sentMessage {
+    font-family: var(--roboto);
     margin-top: 2rem;
     text-align: center;
 }
