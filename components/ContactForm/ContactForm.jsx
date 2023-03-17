@@ -75,9 +75,7 @@ export default function ContactForm() {
 				) : (
 					<p className={styles.sentMessage}>{submitMessage} </p>
 				)}
-				{!submitMessage && fields.message.length > 1 && (
-					<div data-netlify-recaptcha="true"></div>
-				)}
+				{!submitMessage && <div data-netlify-recaptcha="true"></div>}
 				{/* {submitMessage && <p className={styles.sentMessage}>{submitMessage} </p>} */}
 			</form>
 		</>
