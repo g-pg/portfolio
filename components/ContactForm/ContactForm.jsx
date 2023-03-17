@@ -70,14 +70,13 @@ export default function ContactForm() {
 					onChange={handleChange}
 					required
 				></textarea>
-				{!submitMessage ? (
-					<input type="submit" value="Enviar"></input>
-				) : (
-					<p className={styles.sentMessage}>{submitMessage} </p>
-				)}
+				<input type="submit" value="Enviar"></input>
+
 				<div data-netlify-recaptcha="true"></div>
+
 				{/* {submitMessage && <p className={styles.sentMessage}>{submitMessage} </p>} */}
 			</form>
+			<p className={styles.sentMessage}>{submitMessage} </p>
 		</>
 	);
 }
