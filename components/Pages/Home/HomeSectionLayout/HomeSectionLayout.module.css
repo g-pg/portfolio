@@ -1,8 +1,17 @@
 .homeSection {
-    margin-bottom: 25vh;
+    margin-block: 12vh;
     scroll-margin-top: 1rem;
-    min-height: 30vh;
+    /* min-height: 50vh; */
+    padding-block: 2rem;
 }
+
+.homeSection:first-of-type {
+    margin-block: unset;
+    margin-bottom: 12vh;
+    background: var(--white);
+}
+
+.homeSection:nth-child(2) {}
 
 .sectionTitle {
     color: lightgray;
@@ -16,6 +25,24 @@
 .sectionTitle::before {
     content: "_"
 }
+
+.primaryText {
+    font-family: var(--roboto);
+    font-size: clamp(1rem, 1vw, 1.125rem);
+    /* font-weight: 500; */
+    color: var(--white);
+    max-width: 780px;
+    text-align: justify;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.primaryText a {
+    text-decoration: underline;
+    color: var(--cl-accent);
+
+}
+
 
 /*----  General scroll animations ---- */
 .notInView {
