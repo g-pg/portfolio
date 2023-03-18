@@ -13,11 +13,15 @@ export default function ContactSection() {
 			sectionWrapper={styles.sectionWrapper}
 		>
 			<PrimaryText style={{ textAlign: "center" }}>
-				Você pode me mandar uma mensagem pelo formulário abaixo, ou um e-mail para{" "}
+				Entre em contato! <br />
+				<br />
+				Mande uma mensagem por aqui mesmo ou um e-mail para{" "}
 				<Link href="mailto:gabrielpgusso@gmail.com">gabrielpgusso@gmail.com</Link>.
+				{/* <br /> */}
+				{/* <br /> */}
+				{/* De qualquer maneira vou ficar feliz em ouvir o que você tem a dizer! */}
 				<br />
 				<br />
-				De qualquer maneira vou ficar feliz em ouvir o que você tem a dizer!
 			</PrimaryText>
 			<div className={styles.formWrapper}>
 				<ContactForm />
