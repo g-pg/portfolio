@@ -14,7 +14,7 @@
 .homeSection:nth-child(2) {}
 
 .sectionTitle {
-    color: lightgray;
+    color: var(--white);
     margin-bottom: 2rem;
     font-size: 2rem;
     text-align: center;
@@ -23,26 +23,53 @@
 }
 
 .sectionTitle::before {
-    content: "_"
+    content: "_";
+    color: var(--cl-accent)
 }
 
 .primaryText {
     font-family: var(--roboto);
-    font-size: clamp(1rem, 1vw, 1.125rem);
+    font-size: clamp(1rem, 1vw, 1.1rem);
     /* font-weight: 500; */
     color: var(--white);
-    max-width: 780px;
-    text-align: justify;
+    /* max-width: 860px; */
+    /* text-align: justify; */
+    width: 70%;
     margin: 0 auto;
     line-height: 1.6;
+
+}
+
+.primaryText:not(.primaryText:last-of-type) {
+    margin-bottom: 1rem;
 }
 
 .primaryText a {
-    text-decoration: underline;
+    text-decoration: none;
     color: var(--cl-accent);
-
+    transition: all 1s ease;
+    position: relative;
 }
 
+.primaryText a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: var(--cl-accent);
+    bottom: -1px;
+    left: 0px;
+    transition: all 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    /* opacity: 0; */
+}
+
+.primaryText a:hover::after {
+    /* opacity: 1; */
+    transform: scaleX(1);
+    transform-origin: 0 0;
+}
 
 /*----  General scroll animations ---- */
 .notInView {
