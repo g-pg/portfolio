@@ -32,7 +32,7 @@
 .formWrapper input {
     background: none;
     border: none;
-    border-bottom: 1px solid var(--cl-accent);
+    border-bottom: 1px solid var(--white);
     outline: none;
 
 }
@@ -64,7 +64,7 @@
 
 
 .formWrapper [type=submit]:hover {
-    background: var(--cl-accent-dark);
+    background: var(--cl-accent);
     color: var(--white);
 
 }

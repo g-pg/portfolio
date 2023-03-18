@@ -1,0 +1,7 @@
+.sectionWrapper {
+    padding-bottom: 10vh;
+}
+
+.sectionWrapper {
+    border-left: solid 5px var(--cl-accent);
+}

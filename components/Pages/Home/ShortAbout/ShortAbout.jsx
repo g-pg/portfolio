@@ -2,10 +2,11 @@ import React from "react";
 import HomeSectionLayout, { PrimaryText } from "../HomeSectionLayout/HomeSectionLayout";
 import styles from "./ShortAbout.module.css";
 export default function ShortAbout() {
+	const color = { color: "var(--cl-main-dark)" };
 	return (
 		// <>
-		<HomeSectionLayout>
-			<PrimaryText style={{ color: "var(--cl-main-dark)" }}>
+		<HomeSectionLayout sectionWrapper={styles.sectionWrapper}>
+			<PrimaryText style={color}>
 				{/* <span style={{textAlign: "center"}> */}
 				<span
 					style={{
@@ -18,12 +19,18 @@ export default function ShortAbout() {
 				</span>
 				<br />
 				<br /> Meu nome é Gabriel. <br />
-				<br /> Eu me formei em Direito em 2017, mas resolvi fazer{" "}
-				<span style={{ textDecoration: "line-through", color: "grey" }}>errado</span> o
-				que realmente me interessa. Comecei a estudar programação no início de 2023 e,
-				desde então, passei a acordar sabendo que <b>estou no lugar certo.</b>
-				{/* </span> */}
 			</PrimaryText>
+			<PrimaryText style={color}>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi eius corrupti
+				voluptatum. Natus velit non totam iusto ipsam dolorem. Illo, quisquam labore
+				alias nostrum corrupti nemo esse aspernatur distinctio eos.
+			</PrimaryText>
+			<PrimaryText style={color}>
+				Modi culpa tenetur quam possimus dolorem et aut nisi, placeat delectus sed
+				accusamus voluptate voluptates veniam similique eum optio magni ipsa eligendi
+				itaque molestias incidunt. Obcaecati doloribus atque minus, nihil optio enim.
+			</PrimaryText>
+
 			<br />
 		</HomeSectionLayout>
 		// </>

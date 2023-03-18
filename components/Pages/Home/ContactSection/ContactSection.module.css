@@ -2,7 +2,7 @@
 
 .primaryText {
     composes: primaryText from "../HomeSectionLayout/HomeSectionLayout.module.css";
-    text-align: center !important;
+    /* text-align: center !important; */
 }
 
 .primaryText a {}
