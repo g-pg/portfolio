@@ -1,6 +1,10 @@
-.sectionWrapper {
-    padding-bottom: 10vh;
+.sectionClass {
+
+    margin-block: unset;
+    margin-bottom: 12vh;
+    background: var(--white);
 }
+
 
 .sectionWrapper {
     border-left: solid 5px var(--cl-accent);

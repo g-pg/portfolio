@@ -17,7 +17,7 @@ export default function SkillsSection() {
 		<HomeSectionLayout
 			sectionId={"skills"}
 			sectionWrapper={styles.sectionWrapper}
-			// sectionTitle={"Skillset"}
+			sectionTitle={"Skillset"}
 		>
 			<div
 				className={classNames(styles.cardsWrapper, inView && styles.inView)}
@@ -36,14 +36,14 @@ export default function SkillsSection() {
 					<MainCard
 						svg={<GhIcon />}
 						title={"Versionamento"}
-						text={"Tenho experiência com controle de versão no GitHub."}
+						text={"Experiência com controle de versão no GitHub."}
 					/>
 				</div>
 				<div className={styles.card}>
 					<MainCard
 						svg={<ReactIcon />}
 						title={"Frameworks e libs"}
-						text={"Tenho conhecimentos em React.JS e Next.JS."}
+						text={"Conhecimentos em React/NextJS."}
 					/>
 				</div>
 			</div>

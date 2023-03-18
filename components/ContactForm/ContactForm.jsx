@@ -1,3 +1,4 @@
+import PrimaryBtn from "@components/Buttons/PrimaryBtn";
 import React, { useState } from "react";
 import styles from "./ContactForm.module.css";
 export default function ContactForm() {
@@ -71,7 +72,7 @@ export default function ContactForm() {
 					required
 				></textarea>
 				{!submitMessage ? (
-					<input type="submit" value="Enviar"></input>
+					<PrimaryBtn>Enviar</PrimaryBtn>
 				) : (
 					<p className={styles.sentMessage}>{submitMessage} </p>
 				)}

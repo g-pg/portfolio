@@ -2,11 +2,21 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
 import styles from "./HomeSectionLayout.module.css";
-export default function HomeSectionLayout({ children, sectionId, sectionWrapper, sectionTitle }) {
+export default function HomeSectionLayout({
+	children,
+	sectionId,
+	sectionClass,
+	sectionWrapper,
+	sectionTitle,
+}) {
 	const { ref: sectionRef, inView } = useInView({ triggerOnce: true, threshold: 0.05 });
 
 	return (
-		<section className={classNames(styles.homeSection)} id={sectionId} ref={sectionRef}>
+		<section
+			className={classNames(styles.homeSection, sectionClass)}
+			id={sectionId}
+			ref={sectionRef}
+		>
 			<div
 				className={classNames(
 					"container",
@@ -27,4 +37,8 @@ export function PrimaryText({ children, style }) {
 			{children}
 		</p>
 	);
+}
+
+export function HighLight({ children }) {
+	return <span style={{ fontWeight: "700", color: "var(--cl-accent)" }}>{children}</span>;
 }

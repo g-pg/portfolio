@@ -8,7 +8,8 @@ import GhIcon from "@svg/icons/github-icon.svg";
 
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
-import HomeSectionLayout from "../HomeSectionLayout/HomeSectionLayout";
+import HomeSectionLayout, { PrimaryText } from "../HomeSectionLayout/HomeSectionLayout";
+import PrimaryBtn from "@components/Buttons/PrimaryBtn";
 
 //  ---------- Cards ----------- //
 function ProjectCard({ id, name, description, ghLink, liveLink, img, tools, tags, favorite }) {
@@ -50,11 +51,28 @@ export default function ProjectsSection() {
 			sectionWrapper={styles.sectionWrapper}
 			sectionTitle={"Projetos"}
 		>
+			{/* <PrimaryText style={{ textAlign: "center", marginBottom: "3rem" }}>
+				Essas são algumas das coisas que eu venho fazendo.
+			</PrimaryText> */}
 			<div className={classNames(styles.projectsWrapper)}>
 				{projects.map((el) => {
 					return <ProjectCard key={el.id} {...el} />;
 				})}
 			</div>
+			<PrimaryBtn
+				color="white"
+				style={{
+					maxWidth: "200px",
+					fontSize: "0.7rem",
+					fontWeight: "600",
+					marginTop: "2.5rem",
+					alignSelf: "center",
+				}}
+			>
+				<Link href="https://github.com/g-pg" target="_blank">
+					Veja mais no meu GitHub!
+				</Link>
+			</PrimaryBtn>
 		</HomeSectionLayout>
 	);
 }
