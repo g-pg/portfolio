@@ -1,0 +1,36 @@
+.primaryBtn {
+    font-family: var(--fira);
+    background: var(--white);
+    /* border: 1px solid var(--cl-main-dark); */
+    border: none;
+    padding: 0.5rem 1rem;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 1rem;
+    color: var(--cl-main-dark);
+}
+
+.primaryBtn:hover {
+    background: var(--cl-accent);
+    color: var(--white);
+
+}
+
+.primaryBtn.accent {
+    background: var(--cl-accent);
+    color: var(--white);
+}
+
+.primaryBtn.accent:hover {
+    background: var(--cl-main-dark);
+}
+
+.primaryBtn a {
+    color: inherit;
+    text-decoration: none;
+}
