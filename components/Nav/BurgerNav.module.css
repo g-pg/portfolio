@@ -117,7 +117,7 @@
 }
 
 .navWrapper li a::before {
-    content: "_"
+    content: "_";
 }
 
 .navWrapper li>a:hover::before {
@@ -125,7 +125,7 @@
 }
 
 .contact::before {
-    color: var(--cl-more-accent);
+    color: var(--cl-more-accent) !important;
 }
 
 .contact {
