@@ -31,7 +31,7 @@ export default function HomeHero() {
 					ref={sectionRef}
 					style={{
 						opacity: inView ? "1" : "0",
-						transform: !inView ? "translateX(-300px)" : "translateX(0)",
+						transform: inView ? "translateX(0)" : "translateX(-300px)",
 						transition: "all 0.5s ease",
 					}}
 				>
