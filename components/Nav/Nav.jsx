@@ -13,16 +13,25 @@ export function MainNav({ type }) {
 			<div className={classNames(type.navWrapper)}>
 				<ul>
 					<li>
-						<a href="#about">Sobre Mim</a>
+						<a href="javascript:document.getElementById('about').scrollIntoView(true);">
+							Sobre Mim
+						</a>
 					</li>
 					<li>
-						<a href="#skills">Skillset</a>
+						<a href="javascript:document.getElementById('skills').scrollIntoView(true);">
+							Skillset
+						</a>
 					</li>
 					<li>
-						<a href="#projects">Projetos</a>
+						<a href="javascript:document.getElementById('projects').scrollIntoView(true);">
+							Projetos
+						</a>
 					</li>
 					<li>
-						<a href="#contact" className={type.contact}>
+						<a
+							href="javascript:document.getElementById('contact').scrollIntoView(true);"
+							className={type.contact}
+						>
 							Contato
 						</a>
 					</li>
