@@ -2,7 +2,7 @@
 	{
 		"id": 1,
 		"name": "Wordle Finder",
-		"description": "Projeto criado em React.JS para encontrar todas as palavras possíveis em um jogo de Wordle/Termo.",
+		"description": "Projeto criado em ReactJS para encontrar todas as palavras possíveis em um jogo de Wordle/Termo.",
 		"ghLink": "https://github.com/g-pg/wordle-finder",
 		"liveLink": "https://wordle-finder-br.netlify.app/",
 		"img": {
