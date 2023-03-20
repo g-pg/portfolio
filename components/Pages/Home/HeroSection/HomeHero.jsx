@@ -12,21 +12,29 @@ import CloseIcon from "@svg/close.svg";
 
 import SocialBox from "@components/SocialBox/SocialBox";
 import Tape from "@img/tape.png";
-// import { useInView } from "react-intersection-observer";
+import { useInView } from "react-intersection-observer";
+
 export default function HomeHero() {
 	const [isTyping, setIsTyping] = useState(true);
 	const [minimized, setMinimized] = useState(false);
 	const [maximized, setMaximized] = useState(false);
 
-	// const { ref: sectionRef, inView } = useInView();
-
+	const { ref: sectionRef, inView } = useInView();
 	// useEffect(() => {
 	// 	inView ? setMinimized(false) : setMinimized(true);
 	// }, [inView]);
 	return (
 		<section className={styles.section}>
 			<div className="container">
-				<div className={classNames(styles.sectionWrapper)}>
+				<div
+					className={classNames(styles.sectionWrapper)}
+					ref={sectionRef}
+					style={{
+						opacity: inView ? "1" : "0",
+						transform: !inView ? "translateX(-300px)" : "translateX(0)",
+						transition: "all 0.5s ease",
+					}}
+				>
 					<div className={styles.textCol}>
 						<p className={styles.hello}>olá, meu nome é</p>
 						<h1>Gabriel Gusso</h1>
@@ -45,14 +53,14 @@ export default function HomeHero() {
 							setMinimized={setMinimized}
 							setMaximized={setMaximized}
 						/>
-						<div
+						{/* <div
 							className={styles.smiley}
 							// style={{
 							// 	transform: minimized ? "translate(0, -50%)" : "",
 							// }}
 						>
 							<Image src={Tape} alt="fita-crepe.png" />
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>
