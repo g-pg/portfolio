@@ -19,7 +19,7 @@ export default function HomeHero() {
 	const [minimized, setMinimized] = useState(false);
 	const [maximized, setMaximized] = useState(false);
 
-	const { ref: sectionRef, inView } = useInView();
+	const { ref: sectionRef, inView } = useInView({ triggerOnce: true });
 	// useEffect(() => {
 	// 	inView ? setMinimized(false) : setMinimized(true);
 	// }, [inView]);
