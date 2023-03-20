@@ -31,7 +31,7 @@ export default function HomeHero() {
 					ref={sectionRef}
 					style={{
 						opacity: inView ? "1" : "0",
-						transform: inView ? "translateX(0)" : "translateX(-300px)",
+						transform: inView ? "unset" : "translateX(-300px)",
 						transition: "all 0.5s ease",
 					}}
 				>
@@ -44,7 +44,7 @@ export default function HomeHero() {
 						<SocialBox />
 					</div>
 					<div className={styles.imgCol}>
-						<WIndowFrame
+						<WindowFrame
 							classNames={classNames}
 							isTyping={isTyping}
 							setIsTyping={setIsTyping}
@@ -68,7 +68,7 @@ export default function HomeHero() {
 	);
 }
 
-function WIndowFrame({ isTyping, setIsTyping, minimized, maximized, setMinimized, setMaximized }) {
+function WindowFrame({ isTyping, setIsTyping, minimized, maximized, setMinimized, setMaximized }) {
 	return (
 		<div
 			className={classNames(
@@ -104,7 +104,7 @@ function WIndowFrame({ isTyping, setIsTyping, minimized, maximized, setMinimized
 				<Typewriter
 					onInit={(typewriter) => {
 						typewriter
-							.pauseFor(800) // .changeDelay(200)
+							.pauseFor(800)
 							.changeDelay(30)
 							.typeString("<")
 							.typeString("h2>")
