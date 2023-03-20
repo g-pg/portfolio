@@ -11,7 +11,7 @@ import MaximizeIcon from "@svg/maximize.svg";
 import CloseIcon from "@svg/close.svg";
 
 import SocialBox from "@components/SocialBox/SocialBox";
-import Tape from "@img/tape4.png";
+import Tape from "@img/tape.png";
 // import { useInView } from "react-intersection-observer";
 export default function HomeHero() {
 	const [isTyping, setIsTyping] = useState(true);
