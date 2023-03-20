@@ -8,4 +8,11 @@
 
 .sectionWrapper {
     border-left: solid 5px var(--cl-accent);
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    .sectionWrapper {
+        width: 100%;
+    }
 }

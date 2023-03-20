@@ -24,20 +24,19 @@ export default function ShortAbout() {
 				>
 					Olá!
 				</span>
+			</PrimaryText>
+			<PrimaryText style={color}>
+				Eu me formei em Direito pela PUC-PR no final de 2017, mas descobri recentemente
+				que meu coração está em outro lugar. Comecei a estudar programação de forma
+				autônoma em 2023 e não há dia em que eu acorde menos apaixonado por essa área.
+				{/* <br />
+				<br /> */}{" "}
 				<br />
-				<br /> Meu nome é Gabriel. <br />
-			</PrimaryText>
-			<PrimaryText style={color}>
-				Eu me formei em Direito no final de 2017, mas descobri recentemente que meu
-				<HighLight> coração</HighLight> está em outro lugar. Comecei a estudar
-				programação agora, em 2023, e não há dia em que eu acorde menos{" "}
-				<HighLight> apaixonado por esse mundo.</HighLight>
-			</PrimaryText>
-			<PrimaryText style={color}>
-				Nesse instante estou estudando desenvolvimento web com foco no{" "}
-				<HighLight>front-end</HighLight> e nas libraries mais utilizadas no mercado.
-			</PrimaryText>
-			<PrimaryText style={color}>
+				<br />
+				Meu foco atual é desenvolvimento web, especialmente <i>front end</i>. Por isso
+				venho estudando as ferramentas e <i>libraries</i> mais utilizadas no mercado.
+				<br />
+				<br />
 				Também estou buscando a minha primeira experiência profissional. Entre em
 				contato comigo!
 				<br />
@@ -52,7 +51,6 @@ export default function ShortAbout() {
 					<a href="#contact">Contato</a>
 				</PrimaryBtn>
 			</PrimaryText>
-
 			<br />
 		</HomeSectionLayout>
 		// </>
