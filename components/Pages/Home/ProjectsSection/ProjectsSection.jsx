@@ -14,7 +14,7 @@ import Image from "next/image";
 
 //  ---------- Cards ----------- //
 function ProjectCard({ id, name, description, ghLink, liveLink, img, tools, tags, favorite }) {
-	const { ref: projectRef, inView } = useInView({ triggerOnce: true });
+	const { ref: containerRef, inView } = useInView({ triggerOnce: true });
 	return (
 		<>
 			{" "}
@@ -23,7 +23,7 @@ function ProjectCard({ id, name, description, ghLink, liveLink, img, tools, tags
 					styles.projectContainer,
 					inView ? styles.inView : styles.notInView
 				)}
-				ref={projectRef}
+				ref={containerRef}
 			>
 				<Image
 					// style={{

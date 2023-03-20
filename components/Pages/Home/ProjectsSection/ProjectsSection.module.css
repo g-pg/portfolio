@@ -188,13 +188,13 @@
 
 /* Individual transitions */
 
-/* .inView {
-        composes: inView from "../HomeSectionLayout/HomeSectionLayout.module.css";
-    }
+.inView {
+    composes: inView from "../HomeSectionLayout/HomeSectionLayout.module.css";
+}
 
-    .notInView {
-        composes: notInView from "../HomeSectionLayout/HomeSectionLayout.module.css";
-    } */
+.notInView {
+    composes: notInView from "../HomeSectionLayout/HomeSectionLayout.module.css";
+}
 
 @media (max-width: 768px) {
     .projectsWrapper {
