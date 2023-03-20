@@ -1,14 +1,12 @@
 import PrimaryBtn from "@components/Buttons/PrimaryBtn";
 import React from "react";
-import HomeSectionLayout, { PrimaryText, HighLight } from "../HomeSectionLayout/HomeSectionLayout";
+import HomeSectionLayout, { PrimaryText } from "../HomeSectionLayout/HomeSectionLayout";
 import styles from "./ShortAbout.module.css";
-import classNames from "classnames";
-import Link from "next/link";
+
 export default function ShortAbout() {
 	const color = { color: "var(--cl-main-dark)" };
 
 	return (
-		// <>
 		<HomeSectionLayout
 			sectionWrapper={styles.sectionWrapper}
 			sectionClass={styles.sectionClass}
@@ -27,10 +25,8 @@ export default function ShortAbout() {
 			</PrimaryText>
 			<PrimaryText style={color}>
 				Eu me formei em Direito pela PUC-PR no final de 2017, mas descobri recentemente
-				que meu coração está em outro lugar. Comecei a estudar programação de forma
-				autônoma em 2023 e não há dia em que eu acorde menos apaixonado por essa área.
-				{/* <br />
-				<br /> */}{" "}
+				que meu coração está em outro lugar. Comecei a estudar programação em 2023 e não
+				há dia em que eu acorde menos apaixonado por essa área.
 				<br />
 				<br />
 				Meu foco atual é desenvolvimento web, especialmente <i>front end</i>. Por isso
@@ -53,6 +49,5 @@ export default function ShortAbout() {
 			</PrimaryText>
 			<br />
 		</HomeSectionLayout>
-		// </>
 	);
 }
