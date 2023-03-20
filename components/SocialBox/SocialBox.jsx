@@ -12,13 +12,13 @@ export default function SocialBox({ style, iconWidth }) {
 
 	return (
 		<div className={classNames(styles.socialWrapper, "flex-align")} style={style}>
-			<a href="#">
+			<a href="https://www.linkedin.com/in/ggusso/" target="_blank">
 				<LnIcon className={classNames(styles.socialIcon, styles.ln)} width={width} />
 			</a>
-			<a href="#">
+			<a href="https://github.com/g-pg" target="_blank">
 				<GhIcon className={classNames(styles.socialIcon, styles.gh)} width={width} />
 			</a>
-			<a href="#">
+			<a href="#contact">
 				<MailIcon
 					className={classNames(styles.socialIcon, styles.mail)}
 					width={width}
