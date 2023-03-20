@@ -34,13 +34,31 @@
 
 .projectContainer {
     position: relative;
-    background-size: cover;
+    /* background-size: cover; */
     min-height: 26vh;
-    background-repeat: no-repeat;
-    transition: background-position 2s ease, transform 0.8s ease, opacity 0.8s ease;
+    /* background-repeat: no-repeat; */
+    transition: transform 0.8s ease, opacity 0.8s ease;
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 15px 25px, rgba(0, 0, 0, 0.22) 0px 10px 12px;
     overflow: hidden;
+}
+
+.image {
+    object-fit: cover;
+    object-position: top left;
+    transition: all 2s ease;
+}
+
+/* Show more on Malu */
+.projectContainer:nth-child(2):hover .image {
+    transition: all 4s ease;
+    object-position: bottom center;
+}
+
+
+.projectContainer:hover .image {
+    /* display: none; */
+    object-position: bottom center;
 }
 
 
@@ -132,29 +150,15 @@
 }
 
 
-.projectContainer:hover {
-    background-position: 20%;
-    /* filter: blur(10px); */
-}
-
-.projectContainer:nth-child(2):hover {
-    background-position: 40%;
-    transition: background-position 3s ease;
-}
-
-
-
 
 .projectContainer:nth-child(1) {
     grid-area: wordle;
-    /* transition-delay: 0.2s; */
-}
 
+}
 
 .projectContainer:nth-child(2) {
     grid-area: malu;
 
-    /* transition-delay: 0.1s; */
 
 }
 
@@ -162,35 +166,35 @@
     grid-area: ecommerce;
 
 
-    /* transition-delay: 0.3s; */
+
 }
 
 .projectContainer:nth-child(4) {
     grid-area: dropdown;
 
-    /* transition-delay: 0.2s; */
+
 }
 
 .projectContainer:nth-child(5) {
     grid-area: todo;
 
-    /* transition-delay: 0.2s; */
+
 }
 
 .projectContainer:nth-child(6) {
     grid-area: six;
-    /* transition-delay: 0.1s; */
+
 }
 
 /* Individual transitions */
 
-.inView {
-    composes: inView from "../HomeSectionLayout/HomeSectionLayout.module.css";
-}
+/* .inView {
+        composes: inView from "../HomeSectionLayout/HomeSectionLayout.module.css";
+    }
 
-.notInView {
-    composes: notInView from "../HomeSectionLayout/HomeSectionLayout.module.css";
-}
+    .notInView {
+        composes: notInView from "../HomeSectionLayout/HomeSectionLayout.module.css";
+    } */
 
 @media (max-width: 768px) {
     .projectsWrapper {

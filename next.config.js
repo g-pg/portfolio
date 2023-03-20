@@ -1,11 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	reactStrictMode: true,
-};
-
-module.exports = nextConfig;
-
-module.exports = {
 	webpack(config) {
 		config.module.rules.push({
 			test: /\.svg$/i,
@@ -15,4 +10,14 @@ module.exports = {
 
 		return config;
 	},
+	images: {
+		remotePatterns: [
+			{
+				protocol: "https",
+				hostname: "github.com",
+			},
+		],
+	},
 };
+
+module.exports = nextConfig;

@@ -10,22 +10,31 @@ import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import HomeSectionLayout, { PrimaryText } from "../HomeSectionLayout/HomeSectionLayout";
 import PrimaryBtn from "@components/Buttons/PrimaryBtn";
+import Image from "next/image";
 
 //  ---------- Cards ----------- //
 function ProjectCard({ id, name, description, ghLink, liveLink, img, tools, tags, favorite }) {
 	const { ref: projectRef, inView } = useInView({ triggerOnce: true });
 	return (
 		<>
+			{" "}
 			<div
 				className={classNames(
 					styles.projectContainer,
 					inView ? styles.inView : styles.notInView
 				)}
-				style={{
-					backgroundImage: `url(${img.desktop})`,
-				}}
 				ref={projectRef}
 			>
+				<Image
+					// style={{
+					// 	backgroundImage: `url(${img.desktop})`,
+					// }}
+					className={styles.image}
+					alt={name}
+					src={img.desktop}
+					fill="true"
+					object-fit="cover"
+				/>
 				<div className={styles.projectText}>
 					<h4 className={styles.projectTitle}>{name}</h4>
 					<p className={styles.projectDesc}>{description}</p>
@@ -39,6 +48,7 @@ function ProjectCard({ id, name, description, ghLink, liveLink, img, tools, tags
 					</Link>
 				</div>
 				<div className={styles.overlay}></div>
+				{/* </div> */}
 			</div>
 		</>
 	);
