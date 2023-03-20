@@ -84,7 +84,7 @@
 
 .smiley img {
 
-    /* transform: rotate(-15deg); */
+    transform: translateY(-50%);
     height: auto;
 }
 
