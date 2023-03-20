@@ -10,6 +10,7 @@ export default function ShortAbout() {
 		<HomeSectionLayout
 			sectionWrapper={styles.sectionWrapper}
 			sectionClass={styles.sectionClass}
+			sectionId="about"
 		>
 			<PrimaryText style={color}>
 				{/* <span style={{textAlign: "center"}> */}

@@ -13,13 +13,13 @@ export function MainNav({ type }) {
 			<div className={classNames(type.navWrapper)}>
 				<ul>
 					<li>
+						<a href="#about">Sobre Mim</a>
+					</li>
+					<li>
 						<a href="#skills">Skillset</a>
 					</li>
 					<li>
 						<a href="#projects">Projetos</a>
-					</li>
-					<li>
-						<a href="#about">Sobre Mim</a>
 					</li>
 					<li>
 						<a href="#contact" className={type.contact}>
