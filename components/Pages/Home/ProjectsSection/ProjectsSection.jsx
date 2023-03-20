@@ -66,7 +66,7 @@ export default function ProjectsSection() {
 					fontSize: "0.7rem",
 					fontWeight: "600",
 					marginTop: "2.5rem",
-					alignSelf: "center",
+					alignSelf: "flex-end",
 				}}
 			>
 				<Link href="https://github.com/g-pg" target="_blank">
