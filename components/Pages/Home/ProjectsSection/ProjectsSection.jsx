@@ -69,20 +69,25 @@ export default function ProjectsSection() {
 					return <ProjectCard key={el.id} {...el} />;
 				})}
 			</div>
-			<PrimaryBtn
-				color="white"
+			<Link
+				href="https://github.com/g-pg"
+				target="_blank"
 				style={{
-					maxWidth: "200px",
-					fontSize: "0.7rem",
-					fontWeight: "600",
-					marginTop: "2.5rem",
 					alignSelf: "flex-end",
 				}}
 			>
-				<Link href="https://github.com/g-pg" target="_blank">
+				<PrimaryBtn
+					color="white"
+					style={{
+						maxWidth: "200px",
+						fontSize: "0.7rem",
+						fontWeight: "600",
+						marginTop: "2.5rem",
+					}}
+				>
 					Veja mais no meu GitHub!
-				</Link>
-			</PrimaryBtn>
+				</PrimaryBtn>
+			</Link>
 		</HomeSectionLayout>
 	);
 }

@@ -38,15 +38,22 @@ export default function ShortAbout() {
 				contato comigo!
 				<br />
 				<br />
+				{/* <a href="#contact"> */}
 				<PrimaryBtn
 					style={{
 						width: "150px",
 						margin: "0 auto",
 					}}
 					color="accent"
+					onClick={() =>
+						document
+							.getElementById("contact")
+							.scrollIntoView({ behavior: "smooth" })
+					}
 				>
-					<a href="#contact">Contato</a>
+					Contato
 				</PrimaryBtn>
+				{/* </a> */}
 			</PrimaryText>
 			<br />
 		</HomeSectionLayout>
