@@ -9,12 +9,11 @@ import USAFlag from "@svg/icons/usa-flag.svg";
 import SpeechBubble from "@svg/icons/speech-bubble.svg";
 import styles from "./SkillsSection.module.css";
 import classNames from "classnames";
-import { useInView } from "react-intersection-observer";
+
 import HomeSectionLayout from "../HomeSectionLayout/HomeSectionLayout";
 
 export default function SkillsSection() {
-	const { ref: cardRef, inView } = useInView({ triggerOnce: true });
-	console.log(inView);
+	// const { ref: cardRef, inView } = useInView({ triggerOnce: true });
 
 	return (
 		<HomeSectionLayout
