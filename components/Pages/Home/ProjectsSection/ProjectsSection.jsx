@@ -74,6 +74,7 @@ export default function ProjectsSection() {
 				target="_blank"
 				style={{
 					alignSelf: "flex-end",
+					marginTop: "1rem",
 				}}
 			>
 				<PrimaryBtn
@@ -82,7 +83,6 @@ export default function ProjectsSection() {
 						maxWidth: "200px",
 						fontSize: "0.7rem",
 						fontWeight: "600",
-						marginTop: "2.5rem",
 					}}
 				>
 					Veja mais no meu GitHub!

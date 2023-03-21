@@ -8,30 +8,29 @@ import Link from "next/link";
 import SocialBox from "@components/SocialBox/SocialBox";
 
 export function MainNav({ type }) {
+	function scroll(id) {
+		const section = document.getElementById(id);
+		section.scrollIntoView({ behavior: "smooth" });
+		window.location.hash = id;
+	}
 	return (
 		<nav className={type.nav}>
 			<div className={classNames(type.navWrapper)}>
 				<ul>
 					<li>
-						<a href="javascript:document.getElementById('about').scrollIntoView(true);">
-							Sobre Mim
-						</a>
+						<a onClick={() => scroll("about")}>Sobre Mim</a>
 					</li>
 					<li>
-						<a href="javascript:document.getElementById('skills').scrollIntoView(true);">
-							Skillset
-						</a>
+						<a onClick={() => scroll("skills")}>Skillset</a>
 					</li>
 					<li>
-						<a href="javascript:document.getElementById('projects').scrollIntoView(true);">
+						{/* <a href="javascript:document.getElementById('projects').scrollIntoView(true);">
 							Projetos
-						</a>
+						</a> */}
+						<a onClick={() => scroll("projects")}>Projetos</a>
 					</li>
 					<li>
-						<a
-							href="javascript:document.getElementById('contact').scrollIntoView(true);"
-							className={type.contact}
-						>
+						<a onClick={() => scroll("contact")} className={type.contact}>
 							Contato
 						</a>
 					</li>
@@ -52,7 +51,7 @@ function BurgerNav() {
 	useEffect(() => {
 		const aside = asideRef.current;
 		function closeBurger(e) {
-			e.stopPropagation();
+			// e.stopPropagation();
 			if (e.target != aside) {
 				setShowBurger(false);
 			}

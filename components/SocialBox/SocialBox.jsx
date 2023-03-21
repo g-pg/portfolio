@@ -9,7 +9,11 @@ import MailIcon from "@svg/icons/email.svg";
 
 export default function SocialBox({ style, iconWidth }) {
 	const width = iconWidth || "35px";
-
+	function scroll(id) {
+		const section = document.getElementById(id);
+		section.scrollIntoView({ behavior: "smooth" });
+		window.location.hash = id;
+	}
 	return (
 		<div className={classNames(styles.socialWrapper, "flex-align")} style={style}>
 			<a href="https://www.linkedin.com/in/ggusso/" target="_blank">
@@ -18,7 +22,7 @@ export default function SocialBox({ style, iconWidth }) {
 			<a href="https://github.com/g-pg" target="_blank">
 				<GhIcon className={classNames(styles.socialIcon, styles.gh)} width={width} />
 			</a>
-			<a href="#contact">
+			<a onClick={() => scroll("contact")}>
 				<MailIcon
 					className={classNames(styles.socialIcon, styles.mail)}
 					width={width}
