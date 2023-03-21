@@ -64,7 +64,7 @@ function BurgerNav() {
 	}, [showBurger]);
 
 	return (
-		<div className={showBurger ? burgerNav.burgerActive : ""}>
+		<div className={classNames(showBurger && burgerNav.burgerActive, burgerNav.burger)}>
 			<div
 				className={classNames(burgerNav.burgerContainer)}
 				onClick={() => setShowBurger((prev) => !prev)}
@@ -86,19 +86,9 @@ function BurgerNav() {
 }
 
 export default function Nav() {
-	const [isMobile, setIsMobile] = useState(false);
-
-	useEffect(() => {
-		function handleResize() {
-			window.innerWidth < 780 ? setIsMobile(true) : setIsMobile(false);
-		}
-
-		window.addEventListener("resize", handleResize);
-		handleResize(); //executa pelo menos uma vez para checar o window size inicial
-		return () => {
-			window.removeEventListener("resize", handleResize);
-		};
-	}, []);
-
-	return <>{isMobile ? <BurgerNav /> : <MainNav type={desktopNav} />}</>;
+	return (
+		<>
+			<BurgerNav type={burgerNav} /> <MainNav type={desktopNav} />
+		</>
+	);
 }
