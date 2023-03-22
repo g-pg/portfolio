@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }) {
 				/>
 				<meta property="og:image" content="https://i.ibb.co/GcrGZYX/og-home-img.png" />
 			</Head>
-			<Component {...pageProps} />;
+			<Component {...pageProps} />
 		</>
 	);
 }
