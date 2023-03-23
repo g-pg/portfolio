@@ -19,23 +19,25 @@ export default function App({ Component, pageProps }) {
 					content="Desenvolvedor front-end localizado em Curitiba, PR."
 				/>
 				<meta property="og:image" content="https://i.ibb.co/GcrGZYX/og-home-img.png" />
-			</Head>
-			<>
-				<Script
-					strategy="afterInteractive"
+				{/* <!-- Google tag (gtag.js) --> */}
+				<script
+					async
 					src="https://www.googletagmanager.com/gtag/js?id=G-W6DL9XBDQS"
-				></Script>
-				<Script id="google-analytics" strategy="afterInteractive">
-					{`
+				></script>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
 					window.dataLayer = window.dataLayer || [];
 					  function gtag(){dataLayer.push(arguments);}
 					  gtag('js', new Date());
 					
 					  gtag('config', 'G-W6DL9XBDQS');
 
-					`}
-				</Script>
-			</>
+					`,
+					}}
+				></script>
+			</Head>
+
 			<Component {...pageProps} />
 		</>
 	);
