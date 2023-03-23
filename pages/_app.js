@@ -1,6 +1,7 @@
 import "../styles/reset.css";
 import "../styles/globals.css";
 import Head from "next/head";
+import Script from "next/script";
 export default function App({ Component, pageProps }) {
 	return (
 		<>
@@ -19,6 +20,22 @@ export default function App({ Component, pageProps }) {
 				/>
 				<meta property="og:image" content="https://i.ibb.co/GcrGZYX/og-home-img.png" />
 			</Head>
+			<>
+				<Script
+					strategy="afterInteractive"
+					src="https://www.googletagmanager.com/gtag/js?id=G-W6DL9XBDQS"
+				></Script>
+				<Script id="google-analytics" strategy="afterInteractive">
+					{`
+					window.dataLayer = window.dataLayer || [];
+					  function gtag(){dataLayer.push(arguments);}
+					  gtag('js', new Date());
+					
+					  gtag('config', 'G-W6DL9XBDQS');
+
+					`}
+				</Script>
+			</>
 			<Component {...pageProps} />
 		</>
 	);
