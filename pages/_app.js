@@ -6,6 +6,7 @@ export default function App({ Component, pageProps }) {
 	return (
 		<>
 			<Head>
+				{/* META TAGS */}
 				<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png" />
 				<meta
 					name="description"
@@ -19,24 +20,24 @@ export default function App({ Component, pageProps }) {
 					content="Desenvolvedor front-end localizado em Curitiba, PR."
 				/>
 				<meta property="og:image" content="https://i.ibb.co/GcrGZYX/og-home-img.png" />
-				{/* <!-- Google tag (gtag.js) --> */}
-				<script
-					async
-					src="https://www.googletagmanager.com/gtag/js?id=G-W6DL9XBDQS"
-				></script>
-				<script
-					dangerouslySetInnerHTML={{
-						__html: `
+			</Head>
+
+			{/* GTAG */}
+			<Script
+				strategy="afterInteractive"
+				src="https://www.googletagmanager.com/gtag/js?id=G-W6DL9XBDQS"
+			></Script>
+			<Script id="google-analytics" strategy="afterInteractive">
+				{`
+
 					window.dataLayer = window.dataLayer || [];
 					  function gtag(){dataLayer.push(arguments);}
 					  gtag('js', new Date());
 					
 					  gtag('config', 'G-W6DL9XBDQS');
 
-					`,
-					}}
-				></script>
-			</Head>
+				`}
+			</Script>
 
 			<Component {...pageProps} />
 		</>
