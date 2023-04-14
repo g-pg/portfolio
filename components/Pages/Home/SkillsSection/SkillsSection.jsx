@@ -33,7 +33,7 @@ export default function SkillsSection() {
 				{/* <MainCard
 					svg={<GhIcon />}
 					title={"Versionamento"}
-					text={"Controle de versão no GitHub."}
+					text={"Controle de versão no Github."}
 				/> */}
 
 				<MainCard

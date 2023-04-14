@@ -92,7 +92,7 @@ export default function ProjectsSection() {
 						fontWeight: "600",
 					}}
 				>
-					Veja mais no meu GitHub!
+					Veja mais no meu Github!
 				</PrimaryBtn>
 			</Link>
 		</HomeSectionLayout>
