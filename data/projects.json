@@ -71,7 +71,7 @@
 	{
 		"id": 6,
 		"name": "Muvi",
-		"description": "Projeto full stack em NextJS com autenticação de usuário e database. ",
+		"description": "Projeto full stack em NextJS com autenticação de usuário, criação de APIs e database. ",
 		"ghLink": "https://github.com/g-pg/muvi",
 		"liveLink": "https://gpg-muvi.vercel.app/",
 		"img": {
