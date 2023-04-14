@@ -42,7 +42,6 @@ function ProjectCard({ id, name, description, ghLink, liveLink, img, tools, tags
 					<h4 className={styles.projectTitle}>{name}</h4>
 					<p className={styles.projectDesc}>{description}</p>
 				</div>
-				{/* {showBtns && ( */}
 				<div
 					className={styles.links}
 					style={{ pointerEvents: showBtns ? "unset" : "none" }}
@@ -54,7 +53,6 @@ function ProjectCard({ id, name, description, ghLink, liveLink, img, tools, tags
 						<GhIcon className={styles.linkIcon} />
 					</Link>
 				</div>
-				{/* )} */}
 				<div className={styles.overlay}></div>
 			</div>
 		</>
@@ -68,9 +66,6 @@ export default function ProjectsSection() {
 			sectionWrapper={styles.sectionWrapper}
 			sectionTitle={"Projetos"}
 		>
-			{/* <PrimaryText style={{ textAlign: "center", marginBottom: "3rem" }}>
-				Essas são algumas das coisas que eu venho fazendo.
-			</PrimaryText> */}
 			<div className={classNames(styles.projectsWrapper)}>
 				{projects.map((el) => {
 					return <ProjectCard key={el.id} {...el} />;
