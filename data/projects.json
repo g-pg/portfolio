@@ -6,7 +6,7 @@
 		"ghLink": "https://github.com/g-pg/wordle-finder",
 		"liveLink": "https://wordle-finder-br.netlify.app/",
 		"img": {
-			"desktop": "https://github.com/g-pg/wordle-finder/raw/master/preview.png"
+			"desktop": "/img/projects/wordle-finder.png"
 		},
 
 		"tools": "react",
@@ -23,7 +23,7 @@
 		"tags": ["cliente"],
 		"favorite": true,
 		"img": {
-			"desktop": "https://github.com/g-pg/estetica-malusoares/raw/master/readme/desktop-preview.png"
+			"desktop": "/img/projects/estetica-malu.png"
 		}
 	},
 	{
@@ -33,7 +33,7 @@
 		"ghLink": "https://github.com/g-pg/frontendmentor-ecommerce",
 		"liveLink": "https://g-pg-frontendmentor-ecommerce.netlify.app/product/1",
 		"img": {
-			"desktop": "https://github.com/g-pg/frontendmentor-ecommerce/raw/master/readme-img/desktop-preview.png"
+			"desktop": "/img/projects/frontend-ecommerce.png"
 		},
 
 		"tools": ["react"],
@@ -47,7 +47,7 @@
 		"ghLink": "https://github.com/g-pg/frontendmentor-intro-with-dropdown",
 		"liveLink": "https://g-pg.github.io/frontendmentor-intro-with-dropdown/",
 		"img": {
-			"desktop": "https://github.com/g-pg/frontendmentor-intro-with-dropdown/raw/master/readme-img/desktop-preview.png"
+			"desktop": "/img/projects/frontend-dropdown.png"
 		},
 
 		"tools": ["html", "css", "javascript"],
@@ -61,11 +61,25 @@
 		"ghLink": "https://github.com/g-pg/to-do-list",
 		"liveLink": "https://g-pg.github.io/to-do-list/",
 		"img": {
-			"desktop": "https://github.com/g-pg/to-do-list/raw/master/readme/desktop-preview.png"
+			"desktop": "/img/projects/todo-list.png"
 		},
 
 		"tools": ["html", "css", "javascript"],
 		"tags": ["pessoal"],
 		"favorite": false
+	},
+	{
+		"id": 6,
+		"name": "Muvi",
+		"description": "Projeto full stack em NextJS com autenticação de usuário e database. ",
+		"ghLink": "https://github.com/g-pg/muvi",
+		"liveLink": "https://gpg-muvi.vercel.app/",
+		"img": {
+			"desktop": "/img/projects/muvi.png"
+		},
+
+		"tools": ["html", "css", "javascript", "next", "prisma", "mongodb"],
+		"tags": ["pessoal"],
+		"favorite": true
 	}
 ]

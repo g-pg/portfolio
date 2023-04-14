@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./ProjectsSection.module.css";
 
 import projects from "@data/projects.json";
@@ -15,6 +15,9 @@ import Image from "next/image";
 //  ---------- Cards ----------- //
 function ProjectCard({ id, name, description, ghLink, liveLink, img, tools, tags, favorite }) {
 	const { ref: containerRef, inView } = useInView({ triggerOnce: true });
+
+	const [showBtns, setShowBtns] = useState(false); //evita que o usuário clique acidentalmente em mobile
+
 	return (
 		<>
 			{" "}
@@ -24,22 +27,26 @@ function ProjectCard({ id, name, description, ghLink, liveLink, img, tools, tags
 					inView ? styles.inView : styles.notInView
 				)}
 				ref={containerRef}
+				onMouseEnter={() => setShowBtns(true)}
+				onMouseLeave={() => setShowBtns(false)}
 			>
 				<Image
-					// style={{
-					// 	backgroundImage: `url(${img.desktop})`,
-					// }}
 					className={styles.image}
 					alt={name}
 					src={img.desktop}
 					fill="true"
 					object-fit="cover"
+					quality={100}
 				/>
 				<div className={styles.projectText}>
 					<h4 className={styles.projectTitle}>{name}</h4>
 					<p className={styles.projectDesc}>{description}</p>
 				</div>
-				<div className={styles.links}>
+				{/* {showBtns && ( */}
+				<div
+					className={styles.links}
+					style={{ pointerEvents: showBtns ? "unset" : "none" }}
+				>
 					<Link href={liveLink} target="_blank">
 						<LinkIcon className={styles.linkIcon} />
 					</Link>
@@ -47,8 +54,8 @@ function ProjectCard({ id, name, description, ghLink, liveLink, img, tools, tags
 						<GhIcon className={styles.linkIcon} />
 					</Link>
 				</div>
+				{/* )} */}
 				<div className={styles.overlay}></div>
-				{/* </div> */}
 			</div>
 		</>
 	);

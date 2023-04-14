@@ -1,13 +1,13 @@
 .sectionWrapper {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
 }
 
 .projectsWrapper {
     display: grid;
     gap: 1rem;
     grid-template-areas:
+        'muvi muvi muvi'
         'wordle wordle malu'
         'ecommerce dropdown malu'
         'todo todo malu';
@@ -34,9 +34,7 @@
 
 .projectContainer {
     position: relative;
-    /* background-size: cover; */
-    min-height: 26vh;
-    /* background-repeat: no-repeat; */
+    min-height: 240px;
     transition: transform 0.8s ease, opacity 0.8s ease;
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 15px 25px, rgba(0, 0, 0, 0.22) 0px 10px 12px;
@@ -57,7 +55,6 @@
 
 
 .projectContainer:hover .image {
-    /* display: none; */
     object-position: bottom center;
 }
 
@@ -149,8 +146,6 @@
 
 }
 
-
-
 .projectContainer:nth-child(1) {
     grid-area: wordle;
 
@@ -159,30 +154,25 @@
 .projectContainer:nth-child(2) {
     grid-area: malu;
 
-
 }
 
 .projectContainer:nth-child(3) {
     grid-area: ecommerce;
-
-
 
 }
 
 .projectContainer:nth-child(4) {
     grid-area: dropdown;
 
-
 }
 
 .projectContainer:nth-child(5) {
     grid-area: todo;
 
-
 }
 
 .projectContainer:nth-child(6) {
-    grid-area: six;
+    grid-area: muvi;
 
 }
 
@@ -199,32 +189,33 @@
 @media (max-width: 768px) {
     .projectsWrapper {
         grid-template-areas:
-            'wordle wordle'
-            'ecommerce malu'
-            'dropdown malu'
-            'todo todo';
-        grid-template-areas:
-            'wordle'
-            'ecommerce'
+            'muvi'
             'malu'
+            'ecommerce'
+            'wordle'
             'dropdown'
             'todo';
-        /* grid-template-columns: max-content; */
+
         width: 100%;
         background-position: center;
     }
 
-    .linkIcon {
-        width: 20px;
-        height: 20px;
+    .projectContainer {
+        min-height: 23vh;
     }
 
-    .projectText h4 {
-        /* font-size: 0.8rem; */
+    .links {
+        gap: 8px;
     }
+
+    .linkIcon {
+        width: 25px;
+        height: 25px;
+    }
+
 
     .projectText p {
-        /* font-size: 0.6rem; */
+
         width: 100%;
     }
 

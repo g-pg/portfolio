@@ -44,6 +44,7 @@
 /* --------------------- */
 /* Definições gerais */
 /* --------------------- */
+
 a {
   cursor: pointer;
 }
@@ -74,14 +75,6 @@ html {
 }
 
 
-
-@media (max-width: 768px) {
-  section {
-    padding-inline: 1rem;
-
-  }
-}
-
 /* Utility classes */
 
 .flex-align {
@@ -110,11 +103,10 @@ html {
   transition: all 0.3s ease;
   transform: scaleX(0);
   transform-origin: 0 0;
-  /* opacity: 0; */
+
 }
 
 .primary-link:hover::after {
-  /* opacity: 1; */
   transform: scaleX(1);
   transform-origin: 0 0;
 }
