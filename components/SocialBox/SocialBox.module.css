@@ -13,3 +13,9 @@
     transition: 0.15s ease;
     color: var(--cl-accent);
 }
+
+.socialWrapper button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}

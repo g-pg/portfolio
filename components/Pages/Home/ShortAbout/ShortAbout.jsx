@@ -40,6 +40,7 @@ export default function ShortAbout() {
 				<br />
 				{/* <a href="#contact"> */}
 				<PrimaryBtn
+					title="Contato"
 					style={{
 						width: "150px",
 						margin: "0 auto",

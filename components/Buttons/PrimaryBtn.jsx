@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import React from "react";
 import styles from "./PrimaryBtn.module.css";
-export default function PrimaryBtn({ children, onClick, href, type, style, color }) {
+export default function PrimaryBtn({ children, onClick, href, type, style, color, title }) {
 	return (
 		<button
 			onClick={onClick}
@@ -9,6 +9,7 @@ export default function PrimaryBtn({ children, onClick, href, type, style, color
 			className={classNames(styles.primaryBtn, color === "accent" && styles.accent)}
 			style={style}
 			href={href}
+			title={title}
 		>
 			{children}
 		</button>

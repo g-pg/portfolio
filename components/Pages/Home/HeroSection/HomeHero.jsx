@@ -79,7 +79,7 @@ function WindowFrame({ isTyping, setIsTyping, minimized, maximized, setMinimized
 			)}
 		>
 			<div className={classNames(styles.frameBar, "flex-align")}>
-				<a href="#" className={styles.fileName}>
+				<a href="#" className={styles.fileName} aria-hidden>
 					heroSection.jsx
 				</a>
 				<div className={classNames(styles.controls, "flex-align")}>
@@ -100,7 +100,7 @@ function WindowFrame({ isTyping, setIsTyping, minimized, maximized, setMinimized
 					<CloseIcon className={styles.close} onClick={() => alert("😧")} />
 				</div>
 			</div>
-			<div className={styles.frameWindow}>
+			<div className={styles.frameWindow} aria-hidden>
 				<Typewriter
 					onInit={(typewriter) => {
 						typewriter
