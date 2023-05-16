@@ -10,7 +10,7 @@
         'muvi muvi muvi'
         'wordle wordle malu'
         'ecommerce dropdown malu'
-        'todo todo malu';
+        'landing-vue landing-vue malu';
 
     margin: 0 auto;
     width: 100%;
@@ -146,34 +146,37 @@
 
 }
 
-.projectContainer:nth-child(1) {
+.wordle {
     grid-area: wordle;
 
 }
 
-.projectContainer:nth-child(2) {
+.malu {
     grid-area: malu;
 
 }
 
-.projectContainer:nth-child(3) {
+.ecommerce {
     grid-area: ecommerce;
 
 }
 
-.projectContainer:nth-child(4) {
+.dropdown {
     grid-area: dropdown;
 
 }
 
-.projectContainer:nth-child(5) {
+.todo {
     grid-area: todo;
 
 }
 
-.projectContainer:nth-child(6) {
+.muvi {
     grid-area: muvi;
+}
 
+.landing-vue {
+    grid-area: landing-vue;
 }
 
 /* Individual transitions */
@@ -194,7 +197,7 @@
             'ecommerce'
             'wordle'
             'dropdown'
-            'todo';
+            'landing-vue';
 
         width: 100%;
         background-position: center;

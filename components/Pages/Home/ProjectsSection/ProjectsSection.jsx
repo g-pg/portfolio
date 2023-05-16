@@ -13,18 +13,29 @@ import PrimaryBtn from "@components/Buttons/PrimaryBtn";
 import Image from "next/image";
 
 //  ---------- Cards ----------- //
-function ProjectCard({ id, name, description, ghLink, liveLink, img, tools, tags, favorite }) {
+function ProjectCard({
+	id,
+	name,
+	description,
+	ghLink,
+	liveLink,
+	img,
+	tools,
+	tags,
+	favorite,
+	nickname,
+}) {
 	const { ref: containerRef, inView } = useInView({ triggerOnce: true });
 
 	const [showBtns, setShowBtns] = useState(false); //evita que o usuário clique acidentalmente em mobile
 
 	return (
 		<>
-			{" "}
 			<div
 				className={classNames(
 					styles.projectContainer,
-					inView ? styles.inView : styles.notInView
+					inView ? styles.inView : styles.notInView,
+					styles[nickname]
 				)}
 				ref={containerRef}
 				onMouseEnter={() => setShowBtns(true)}
@@ -60,6 +71,8 @@ function ProjectCard({ id, name, description, ghLink, liveLink, img, tools, tags
 }
 
 export default function ProjectsSection() {
+	//nicknames: "wordle", "malu", "ecommerce", "dropdown", "muvi", "todo", "landing-vue"
+	const projectsToRender = ["wordle", "malu", "ecommerce", "dropdown", "muvi", "landing-vue"];
 	return (
 		<HomeSectionLayout
 			sectionId="projects"
@@ -68,7 +81,9 @@ export default function ProjectsSection() {
 		>
 			<div className={classNames(styles.projectsWrapper)}>
 				{projects.map((el) => {
-					return <ProjectCard key={el.id} {...el} />;
+					if (projectsToRender.includes(el.nickname)) {
+						return <ProjectCard key={el.id} {...el} />;
+					}
 				})}
 			</div>
 			<Link

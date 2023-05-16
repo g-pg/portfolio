@@ -11,7 +11,8 @@
 
 		"tools": "react",
 		"tags": ["pessoal"],
-		"favorite": true
+		"favorite": true,
+		"nickname": "wordle"
 	},
 	{
 		"id": 2,
@@ -24,12 +25,13 @@
 		"favorite": true,
 		"img": {
 			"desktop": "/img/projects/estetica-malu.png"
-		}
+		},
+		"nickname": "malu"
 	},
 	{
 		"id": 3,
 		"name": "Página de E-commerce",
-		"description": "Challenge do Frontend Mentor para uma página de E-commerce com carrinho funcional.",
+		"description": "Challenge do Frontend Mentor para uma página de E-commerce com carrinho funcional. As rotas foram programadas, mas não alimentadas.",
 		"ghLink": "https://github.com/g-pg/frontendmentor-ecommerce",
 		"liveLink": "https://g-pg-frontendmentor-ecommerce.netlify.app/product/1",
 		"img": {
@@ -38,12 +40,13 @@
 
 		"tools": ["react"],
 		"tags": ["educacional"],
-		"favorite": true
+		"favorite": true,
+		"nickname": "ecommerce"
 	},
 	{
 		"id": 4,
 		"name": "Página com menu dropdown",
-		"description": "Challenge do Frontend Mentor para uma landing page com menu dropdown feita com JS vanilla.",
+		"description": "Challenge do Frontend Mentor para uma landing page com menu dropdown feita com JS vanilla (sem rotas, apenas o layout).",
 		"ghLink": "https://github.com/g-pg/frontendmentor-intro-with-dropdown",
 		"liveLink": "https://g-pg.github.io/frontendmentor-intro-with-dropdown/",
 		"img": {
@@ -52,7 +55,8 @@
 
 		"tools": ["html", "css", "javascript"],
 		"tags": ["educacional"],
-		"favorite": false
+		"favorite": false,
+		"nickname": "dropdown"
 	},
 	{
 		"id": 5,
@@ -66,7 +70,8 @@
 
 		"tools": ["html", "css", "javascript"],
 		"tags": ["pessoal"],
-		"favorite": false
+		"favorite": false,
+		"nickname": "todo"
 	},
 	{
 		"id": 6,
@@ -80,6 +85,22 @@
 
 		"tools": ["html", "css", "javascript", "next", "prisma", "mongodb"],
 		"tags": ["pessoal"],
-		"favorite": true
+		"favorite": true,
+		"nickname": "muvi"
+	},
+	{
+		"id": 7,
+		"name": "Landing page com Vue",
+		"description": "Desafio do Frontend Mentor feito em Vue para aprender a utilizar o framework (sem rotas, apenas o layout). ",
+		"ghLink": "https://github.com/g-pg/frontendmentor-blogr-page",
+		"liveLink": "https://gpg-frontendmentor-blogr-page.netlify.app/",
+		"img": {
+			"desktop": "/img/projects/blogr-page.png"
+		},
+
+		"tools": ["html", "css", "javascript", "vue"],
+		"tags": ["pessoal"],
+		"favorite": true,
+		"nickname": "landing-vue"
 	}
 ]
