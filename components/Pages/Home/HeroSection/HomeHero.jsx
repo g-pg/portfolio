@@ -1,7 +1,5 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 
-import Link from "next/link";
-import Image from "next/image";
 import classNames from "classnames";
 import styles from "./HomeHero.module.css";
 import Typewriter from "typewriter-effect";
@@ -11,7 +9,6 @@ import MaximizeIcon from "@svg/maximize.svg";
 import CloseIcon from "@svg/close.svg";
 
 import SocialBox from "@components/SocialBox/SocialBox";
-import Tape from "@img/tape.png";
 import { useInView } from "react-intersection-observer";
 
 export default function HomeHero() {
@@ -20,9 +17,7 @@ export default function HomeHero() {
 	const [maximized, setMaximized] = useState(false);
 
 	const { ref: sectionRef, inView } = useInView({ triggerOnce: true });
-	// useEffect(() => {
-	// 	inView ? setMinimized(false) : setMinimized(true);
-	// }, [inView]);
+
 	return (
 		<section className={styles.section}>
 			<div className="container">
@@ -53,14 +48,6 @@ export default function HomeHero() {
 							setMinimized={setMinimized}
 							setMaximized={setMaximized}
 						/>
-						{/* <div
-							className={styles.smiley}
-							// style={{
-							// 	transform: minimized ? "translate(0, -50%)" : "",
-							// }}
-						>
-							<Image src={Tape} alt="fita-crepe.png" />
-						</div> */}
 					</div>
 				</div>
 			</div>

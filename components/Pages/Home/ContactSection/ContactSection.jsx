@@ -1,5 +1,4 @@
 import ContactForm from "@components/ContactForm/ContactForm";
-import classNames from "classnames";
 import Link from "next/link";
 import React from "react";
 import HomeSectionLayout, { PrimaryText } from "../HomeSectionLayout/HomeSectionLayout";
@@ -17,9 +16,6 @@ export default function ContactSection() {
 				<br />
 				Mande uma mensagem por aqui mesmo ou um e-mail para{" "}
 				<Link href="mailto:gabrielpgusso@gmail.com">gabrielpgusso@gmail.com</Link>.
-				{/* <br /> */}
-				{/* <br /> */}
-				{/* De qualquer maneira vou ficar feliz em ouvir o que você tem a dizer! */}
 				<br />
 				<br />
 			</PrimaryText>

@@ -21,12 +21,7 @@ export default function Home() {
 				/>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
-			<div
-				id="hero-section"
-				style={{
-					minHeight: "100dvh",
-				}}
-			>
+			<div id="hero-section">
 				<Header />
 				<HomeHero />
 			</div>
