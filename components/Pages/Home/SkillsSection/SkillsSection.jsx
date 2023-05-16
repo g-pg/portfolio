@@ -15,6 +15,7 @@ import {
 	IconReact,
 	IconTS,
 	IconVite,
+	IconVue,
 } from "@components/ToolsIcons/ToolsIcons";
 import SpeechBubble from "@svg/icons/speech-bubble.svg";
 import styles from "./SkillsSection.module.css";
@@ -55,9 +56,10 @@ export default function SkillsSection() {
 					<IconJS />
 					<IconGh />
 					<IconReact />
-					<IconVite />
 					<IconNext />
-					{/* <IconTS/> */}
+					<IconVue />
+					<IconVite />
+					<IconTS />
 					<IconPrisma />
 					<IconMongo />
 					<IconNode />
