@@ -42,7 +42,9 @@ export default function SkillsSection() {
 					<MainCard
 						svg={<ReactIcon />}
 						title={"Frameworks e libs"}
-						text={"Conhecimentos em React/NextJS e ferramentas relacionadas."}
+						text={
+							"Conhecimentos em React, NextJS, Vue e ferramentas relacionadas."
+						}
 					/>
 					<MainCard
 						svg={<SpeechBubble />}

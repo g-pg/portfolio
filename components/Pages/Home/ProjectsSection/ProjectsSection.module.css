@@ -10,8 +10,8 @@
         'muvi muvi muvi'
         'wordle wordle malu'
         'ecommerce dropdown malu'
-        'landing-vue landing-vue malu';
-
+        'landing-vue landing-vue malu'
+        'dinosor jokenpo jokenpo';
     margin: 0 auto;
     width: 100%;
 }
@@ -85,9 +85,14 @@
 .projectText p {
     font-size: clamp(0.7rem, 1.2vw, 1rem);
     font-weight: 300;
-    width: 70%;
-    text-shadow: rgba(0, 0, 0, 1) 0px 3px 3px;
+    max-width: 70%;
+    text-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 1);
+
 }
+
+/* .projectText span {
+    background: var(--cl-accent)
+} */
 
 .links {
     position: absolute;
@@ -146,39 +151,6 @@
 
 }
 
-.wordle {
-    grid-area: wordle;
-
-}
-
-.malu {
-    grid-area: malu;
-
-}
-
-.ecommerce {
-    grid-area: ecommerce;
-
-}
-
-.dropdown {
-    grid-area: dropdown;
-
-}
-
-.todo {
-    grid-area: todo;
-
-}
-
-.muvi {
-    grid-area: muvi;
-}
-
-.landing-vue {
-    grid-area: landing-vue;
-}
-
 /* Individual transitions */
 
 .inView {
@@ -197,7 +169,10 @@
             'ecommerce'
             'wordle'
             'dropdown'
-            'landing-vue';
+            'landing-vue'
+            'dinosor'
+            'jokenpo';
+
 
         width: 100%;
         background-position: center;

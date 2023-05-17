@@ -10,7 +10,7 @@ export default function Footer() {
 				<SocialBox style={{ gap: "1.2rem" }} iconWidth="25px" />
 			</div>
 			<PrimaryText style={{ fontSize: "0.7rem", width: "auto", marginTop: "-0.5rem" }}>
-				Desenvolvido por mim em <HighLight>NextJS</HighLight> .
+				Desenvolvido em <HighLight>NextJS</HighLight> .
 			</PrimaryText>
 		</footer>
 	);
