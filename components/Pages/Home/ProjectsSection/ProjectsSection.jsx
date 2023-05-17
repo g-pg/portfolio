@@ -50,7 +50,9 @@ function ProjectCard({
 				/>
 				<div className={styles.projectText}>
 					<h4 className={styles.projectTitle}>{name}</h4>
-					<p className={styles.projectDesc}>{description}</p>
+					<p className={styles.projectDesc}>
+						<span>{description}</span>
+					</p>
 				</div>
 				<div
 					className={styles.links}
