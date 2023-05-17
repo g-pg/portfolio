@@ -28,14 +28,13 @@ function ProjectCard({
 	const { ref: containerRef, inView } = useInView({ triggerOnce: true });
 
 	const [showBtns, setShowBtns] = useState(false); //evita que o usuário clique acidentalmente em mobile
-
 	return (
 		<>
 			<div
 				className={classNames(
 					styles.projectContainer,
 					inView ? styles.inView : styles.notInView,
-					styles[nickname]
+					nickname
 				)}
 				ref={containerRef}
 				onMouseEnter={() => setShowBtns(true)}
@@ -66,6 +65,11 @@ function ProjectCard({
 				</div>
 				<div className={styles.overlay}></div>
 			</div>
+			<style jsx>
+				{`
+					${`.${nickname} {grid-area: ${nickname}}`}
+				`}
+			</style>
 		</>
 	);
 }

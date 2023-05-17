@@ -146,39 +146,6 @@
 
 }
 
-.wordle {
-    grid-area: wordle;
-
-}
-
-.malu {
-    grid-area: malu;
-
-}
-
-.ecommerce {
-    grid-area: ecommerce;
-
-}
-
-.dropdown {
-    grid-area: dropdown;
-
-}
-
-.todo {
-    grid-area: todo;
-
-}
-
-.muvi {
-    grid-area: muvi;
-}
-
-.landing-vue {
-    grid-area: landing-vue;
-}
-
 /* Individual transitions */
 
 .inView {
