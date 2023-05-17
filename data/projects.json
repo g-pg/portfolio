@@ -100,7 +100,67 @@
 
 		"tools": ["html", "css", "javascript", "vue"],
 		"tags": ["pessoal"],
-		"favorite": true,
+		"favorite": false,
 		"nickname": "landing-vue"
+	},
+	{
+		"id": 8,
+		"name": "Snek (Snake)",
+		"description": "Primeiro dos joguinhos que fiz praticar um pouco de Javascript.",
+		"ghLink": "https://github.com/g-pg/snek",
+		"liveLink": "https://g-pg.github.io/snek/",
+		"img": {
+			"desktop": "/img/projects/snek.png"
+		},
+
+		"tools": ["html", "css", "javascript"],
+		"tags": ["pessoal"],
+		"favorite": false,
+		"nickname": "snek"
+	},
+	{
+		"id": 9,
+		"name": "Flepburd (Flepbird)",
+		"description": "Flepbird copy para praticar Javascript (sem gráficos).",
+		"ghLink": "https://github.com/g-pg/flepburd",
+		"liveLink": "https://g-pg.github.io/flepburd/",
+		"img": {
+			"desktop": "/img/projects/flepburd.png"
+		},
+
+		"tools": ["html", "css", "javascript"],
+		"tags": ["pessoal"],
+		"favorite": false,
+		"nickname": "flepburd"
+	},
+	{
+		"id": 10,
+		"name": "Dinosorr (Chrome Dinosaur)",
+		"description": "Chrome Dinosaur copy para praticar Javascript (com gráficos).",
+		"ghLink": "https://github.com/g-pg/dinosorr",
+		"liveLink": "https://g-pg.github.io/dinosorr/",
+		"img": {
+			"desktop": "/img/projects/dinosor.png"
+		},
+
+		"tools": ["html", "css", "javascript"],
+		"tags": ["pessoal"],
+		"favorite": false,
+		"nickname": "dinosor"
+	},
+	{
+		"id": 11,
+		"name": "Rock, Paper, Scissors",
+		"description": "Challenge do Frontend Mentor para um jogo de Pedra, Papel e Tesoura, com transições e animações. Feito com React.",
+		"ghLink": "https://github.com/g-pg/frontendmentor-rock-paper-scissors",
+		"liveLink": "https://gpg-rock-paper-scissors.netlify.app/",
+		"img": {
+			"desktop": "/img/projects/jokenpo.png"
+		},
+
+		"tools": ["html", "css", "javascript", "react"],
+		"tags": ["pessoal"],
+		"favorite": false,
+		"nickname": "jokenpo"
 	}
 ]
