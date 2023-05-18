@@ -54,12 +54,12 @@ export default function SkillsSection() {
 					<IconHtml />
 					<IconCSS />
 					<IconJS />
+					<IconTS />
 					<IconGh />
 					<IconReact />
 					<IconNext />
 					<IconVue />
 					<IconVite />
-					<IconTS />
 					<IconPrisma />
 					<IconMongo />
 					<IconNode />
