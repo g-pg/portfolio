@@ -1,14 +1,12 @@
 import classNames from "classnames";
 import React, { useState } from "react";
 import styles from "./ProjectsSection.module.css";
-
 import projects from "@data/projects.json";
-import LinkIcon from "@svg/icons/link-icon.svg";
-import GhIcon from "@svg/icons/github-icon.svg";
-
+import { FaGithub } from "react-icons/fa";
+import { RxExternalLink } from "react-icons/rx";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
-import HomeSectionLayout, { PrimaryText } from "../HomeSectionLayout/HomeSectionLayout";
+import HomeSectionLayout from "../HomeSectionLayout/HomeSectionLayout";
 import PrimaryBtn from "@components/Buttons/PrimaryBtn";
 import Image from "next/image";
 
@@ -55,10 +53,10 @@ function ProjectCard({
 			</div>
 			<div className={styles.links} style={{ pointerEvents: showBtns ? "unset" : "none" }}>
 				<Link href={liveLink} target="_blank">
-					<LinkIcon className={styles.linkIcon} />
+					<RxExternalLink className={styles.icon} />
 				</Link>
 				<Link href={ghLink} target="_blank">
-					<GhIcon className={styles.linkIcon} />
+					<FaGithub className={styles.icon} />
 				</Link>
 			</div>
 			<div className={styles.overlay}></div>

@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import desktopNav from "./DesktopNav.module.css";
 import burgerNav from "./BurgerNav.module.css";
-import LnIcon from "@svg/icons/linkedin-icon.svg";
-import GhIcon from "@svg/icons/github-icon.svg";
 import classNames from "classnames";
-import Link from "next/link";
+
 import SocialBox from "@components/SocialBox/SocialBox";
 
 export function MainNav({ type }) {
