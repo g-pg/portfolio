@@ -7,7 +7,7 @@ export default function Footer() {
 	return (
 		<footer className={styles.footerWrapper}>
 			<div className={classNames("container", styles.footerWrapper)}>
-				<SocialBox style={{ gap: "1.2rem" }} iconWidth="25px" />
+				<SocialBox style={{ gap: "1.2rem" }} iconWidth="25" />
 			</div>
 			<PrimaryText style={{ fontSize: "0.7rem", width: "auto", marginTop: "-0.5rem" }}>
 				Desenvolvido em <HighLight>NextJS</HighLight> .

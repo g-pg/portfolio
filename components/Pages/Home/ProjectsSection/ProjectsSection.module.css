@@ -108,13 +108,12 @@
     transition: 1.5s ease;
 }
 
-.linkIcon {
-    width: 30px;
-    height: 30px;
+.icon {
+    font-size: 30px;
     color: white;
 }
 
-.linkIcon:hover {
+.icon:hover {
     transform: scale(1.1);
     color: var(--cl-accent);
 }
@@ -134,7 +133,7 @@
     /* animation: 1s shine ease; */
 }
 
-.projectContainer:hover .linkIcon {
+.projectContainer:hover .icon {
     animation: 0.9s shine ease;
 }
 

@@ -3,12 +3,11 @@ import React from "react";
 import classNames from "classnames";
 
 import styles from "./SocialBox.module.css";
-import LnIcon from "@svg/icons/linkedin-icon.svg";
-import GhIcon from "@svg/icons/github-icon.svg";
-import MailIcon from "@svg/icons/email.svg";
 
+import { FaDev, FaLinkedin, FaGithub } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
 export default function SocialBox({ style, iconWidth }) {
-	const width = iconWidth || "35px";
+	const width = iconWidth || "35";
 	function scroll(id) {
 		const section = document.getElementById(id);
 		section.scrollIntoView({ behavior: "smooth" });
@@ -17,16 +16,29 @@ export default function SocialBox({ style, iconWidth }) {
 	return (
 		<div className={classNames(styles.socialWrapper, "flex-align")} style={style}>
 			<a href="https://www.linkedin.com/in/ggusso/" target="_blank" title="Linkedin">
-				<LnIcon className={classNames(styles.socialIcon, styles.ln)} width={width} />
+				<FaLinkedin
+					className={classNames(styles.socialIcon, styles.ln)}
+					fontSize={width}
+				/>
 			</a>
 			<a href="https://github.com/g-pg" target="_blank" title="Github">
-				<GhIcon className={classNames(styles.socialIcon, styles.gh)} width={width} />
+				<FaGithub
+					className={classNames(styles.socialIcon, styles.gh)}
+					fontSize={width}
+				/>
+			</a>
+			<a href="https://dev.to/gpg" target="_blank" title="Dev.to">
+				<FaDev className={classNames(styles.socialIcon, styles.gh)} fontSize={width} />
 			</a>
 
-			<button onClick={() => scroll("contact")} title="Contato">
-				<MailIcon
+			<button
+				onClick={() => scroll("contact")}
+				title="Contato"
+				style={{ marginLeft: "-5px" }}
+			>
+				<IoMdMail
 					className={classNames(styles.socialIcon, styles.mail)}
-					width={width}
+					fontSize={Number(width) + 5 + "px"}
 				/>
 			</button>
 		</div>
