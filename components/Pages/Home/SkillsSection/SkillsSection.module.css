@@ -18,12 +18,15 @@
 
 .tools {
     margin: 0 auto;
-    max-width: 42%;
+    max-width: 400px;
+
     margin-top: 5rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+
+
     gap: 1.3rem;
 }
 
@@ -58,7 +61,7 @@
     }
 
     .tools {
-        max-width: 100%;
+        /* max-width: 100%; */
     }
 
 }
