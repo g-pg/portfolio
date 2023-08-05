@@ -15,9 +15,9 @@ export function MainNav({ type }) {
 		<nav className={type.nav}>
 			<div className={classNames(type.navWrapper)}>
 				<ul>
-					<li>
+					{/* <li>
 						<a onClick={() => scroll("about")}>Sobre Mim</a>
-					</li>
+					</li> */}
 					<li>
 						<a onClick={() => scroll("skills")}>Skillset</a>
 					</li>
@@ -86,7 +86,7 @@ function BurgerNav() {
 export default function Nav() {
 	return (
 		<>
-			<BurgerNav type={burgerNav} /> <MainNav type={desktopNav} />
+			<BurgerNav /> <MainNav type={desktopNav} />
 		</>
 	);
 }

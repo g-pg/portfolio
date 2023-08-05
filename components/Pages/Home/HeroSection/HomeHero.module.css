@@ -175,7 +175,7 @@
 }
 
 .typewriter h2 {
-    font-size: clamp(0.9rem, 1vw, 1.1rem);
+    font-size: clamp(1rem, 1vw, 1.3rem);
     font-weight: 400;
     font-family: 'Fira Code', monospace;
     margin-block: 10px;
@@ -272,7 +272,7 @@
 
     .typewriter,
     .typewriter h2 {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
 

@@ -25,7 +25,7 @@ export default function Home() {
 				<Header />
 				<HomeHero />
 			</div>
-			<ShortAbout />
+			{/* <ShortAbout /> */}
 			<SkillsSection />
 
 			<ProjectsSection />

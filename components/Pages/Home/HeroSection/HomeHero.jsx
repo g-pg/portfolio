@@ -33,9 +33,9 @@ export default function HomeHero() {
 					<div className={styles.textCol}>
 						<p className={styles.hello}>olá, meu nome é</p>
 						<h1>Gabriel Gusso</h1>
-						<p className={styles.subText}>
+						{/* <p className={styles.subText}>
 							desenvolvedor front-end localizado em Curitiba, PR.
-						</p>
+						</p> */}
 						<SocialBox />
 					</div>
 					<div className={styles.imgCol}>
@@ -96,7 +96,7 @@ function WindowFrame({ isTyping, setIsTyping, minimized, maximized, setMinimized
 							.typeString("<")
 							.typeString("h2>")
 							.typeString(
-								'<h2> Eu gosto de programar e estou buscando experiência profissional em <span class="span-dev">desenvolvimento web</span>.</h2> '
+								'<h2> <span class="span-dev">Desenvolvedor web</span> localizado em Curitiba, PR.</h2> '
 							)
 							.changeDelay(60)
 							.callFunction(() => setIsTyping(!isTyping))
